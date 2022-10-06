@@ -314,5 +314,4 @@ def main():
 
 
 main()
-print(len(namesDic))
-#print(json.dumps(namesDic, indent=4))
+print(json.dumps(namesDic, indent=4))
