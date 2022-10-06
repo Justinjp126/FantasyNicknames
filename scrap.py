@@ -309,9 +309,16 @@ def addPlayersToDictionary():
     addOtherPlayers()
 
 
+def createJSONFile():
+    namesJSON = json.dumps(namesDic, indent=4)
+
+    with open("fantasy-nicknames.json", "w") as outfile:
+        json.dump(namesJSON, outfile)
+
+
 def main():
     addPlayersToDictionary()
+    createJSONFile()
 
 
 main()
-print(json.dumps(namesDic, indent=4))
