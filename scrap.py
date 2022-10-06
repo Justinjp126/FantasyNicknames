@@ -309,9 +309,21 @@ def addPlayersToDictionary():
     addOtherPlayers()
 
 
+def createJSONFile():
+    playerJSON = json.dumps(namesDic, indent=4)
+
+    for line_f in playerJSON:
+        if "\\u2019" in line_f:
+            line_f = line_f.replace("\\u2019", "")
+            print(line_f)
+
+        with open("nicknames.json", "w") as outfile:
+            outfile.write(playerJSON)
+
+
 def main():
     addPlayersToDictionary()
+    # createJSONFile()
 
 
 main()
-print(json.dumps(namesDic, indent=4))
