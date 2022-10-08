@@ -1,6 +1,12 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import Test from './components/Test.jsx'
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
+import Nickname from './components/Nickname'
+import NicknamePage from './components/NicknamePage'
+import Player from './components/Player'
+import Search from './components/Search'
+import MainPage from './components/MainPage'
 
 import './css/styles.min.css'
 
@@ -9,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <Test />
+      <MainPage />
     </div>
   )
 }
