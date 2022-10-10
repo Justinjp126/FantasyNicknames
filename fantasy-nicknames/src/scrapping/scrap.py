@@ -121,6 +121,8 @@ j_robinson_source = requests.get(
     'https://www.fanduel.com/theduel/posts/james-robinson-fantasy-football-team-names-01ek2t9p4b49').text
 t_hockenson_source = requests.get(
     'https://flurrysports.org/t-j-hockenson-fantasy-football-team-names/').text
+g_pickens_source = requests.get(
+    'https://flurrysports.org/george-pickens-fantasy-football-team-names/').text
 namesDic = {}  # dictionary with name as key, array of nicknames as value
 
 '''
@@ -306,6 +308,7 @@ def addPlayersToDictionary():
     addFlurrySportsPlayer(k_hunt_source, "Kareem Hunt")
     addFanDualPlayer(j_robinson_source, "James Robinson")
     addFlurrySportsPlayer(t_hockenson_source, "TJ Hockenson")
+    addFlurrySportsPlayer(g_pickens_source, "George Pickens")
     addOtherPlayers()
 
 
@@ -317,7 +320,7 @@ def createJSONFile():
 
 def main():
     addPlayersToDictionary()
-    # print(json.dumps(namesDic, indent=4))
+    print(namesDic.keys())
     # createJSONFile()
 
 
