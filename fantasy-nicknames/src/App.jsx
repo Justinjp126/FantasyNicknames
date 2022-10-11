@@ -11,10 +11,6 @@ import fantasyNicknames from "./fantasy-nicknames.json"
 import './css/styles.min.css'
 
 function App() {
-  Object.keys(fantasyNicknames).forEach((items, index)=> {
-    console.log(index)
-    return (<Nickname items={items} />)
-  })
   return (
     <div className="App">
       <Nickname />

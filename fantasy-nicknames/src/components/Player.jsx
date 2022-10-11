@@ -1,8 +1,7 @@
 import React from "react";
-export default function Player() {
-  //  Object.keys(fantasyNicknames).forEach((items) => {
-  //   console.log(items)
-  // })
+export default function Player(props) {
+  const myNames = props.items
+  console.log(myNames['Johnathan Taylor'].nicknames)
   return (
     <>
       <div className="player">
