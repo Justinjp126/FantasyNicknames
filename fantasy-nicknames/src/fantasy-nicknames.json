@@ -33,7 +33,9 @@
             "Jonathan's Army",
             "Taylor Colts"
         ],
-        "key": 1
+        "key": 1,
+        "type": "RB",
+        "number": 28
     },
     "Najee Harris": {
         "name": "Najee Harris",
@@ -79,7 +81,9 @@
             "Najee je t'aime",
             "Najee Harris and the O-line of secrets"
         ],
-        "key": 2
+        "key": 2,
+        "type": "RB",
+        "number": 22
     },
     "Cooper Kupp": {
         "name": "Cooper Kupp",
@@ -110,7 +114,9 @@
             "Buckle Up, Butter Kupp",
             "Flew the Coop"
         ],
-        "key": 3
+        "key": 3,
+        "type": "WR",
+        "number": 10
     },
     "Derrick Henry": {
         "name": "Derrick Henry",
@@ -141,7 +147,9 @@
             "Double Dog Derrick",
             "With Henry Luck"
         ],
-        "key": 4
+        "key": 4,
+        "type": "RB",
+        "number": 22
     },
     "Christian McCaffrey": {
         "name": "Christian McCaffrey",
@@ -187,7 +195,9 @@
             "Christian McCats",
             "The Count of Monte Christian"
         ],
-        "key": 5
+        "key": 5,
+        "type": "RB",
+        "number": 22
     },
     "Alvin Kamara": {
         "name": "Alvin Kamara",
@@ -233,7 +243,9 @@
             "All Barkley, All Bite",
             "Hot Chubb Time Machine"
         ],
-        "key": 6
+        "key": 6,
+        "type": "RB",
+        "number": 41
     },
     "Ja'Marr Chase": {
         "name": "Ja'Marr Chase",
@@ -264,7 +276,9 @@
             "Ja'Marr Chase Bank",
             "View From Ja'Marr"
         ],
-        "key": 7
+        "key": 7,
+        "type": "WR",
+        "number": 1
     },
     "CeeDee Lamb": {
         "name": "CeeDee Lamb",
@@ -304,7 +318,9 @@
             "Now you CeeDee, Now you Don't",
             "CeeDee Burner"
         ],
-        "key": 8
+        "key": 8,
+        "type": "WR",
+        "number": 88
     },
     "Stefon Diggs": {
         "name": "Stefon Diggs",
@@ -335,7 +351,9 @@
             "They Call Me Mr. Diggs",
             "Diggs Up"
         ],
-        "key": 9
+        "key": 9,
+        "type": "WR",
+        "number": 14
     },
     "Davante Adams": {
         "name": "Davante Adams",
@@ -371,7 +389,9 @@
             "Adams' on Raid",
             "Adams Army"
         ],
-        "key": 10
+        "key": 10,
+        "type": "WR",
+        "number": 17
     },
     "D'Andre Swift": {
         "name": "D'Andre Swift",

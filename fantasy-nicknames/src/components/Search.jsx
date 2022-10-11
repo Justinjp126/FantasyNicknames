@@ -3,7 +3,7 @@ import React from "react";
 export default function Search() {
   return (
     <>
-      <input type="search" name="Enter Player Name" id="searchBar" />
+      <input placeholder="Johnathon Taylor" type="search" name="Enter Player Name" id="searchBar" className="search" />
     </>
     
   );
