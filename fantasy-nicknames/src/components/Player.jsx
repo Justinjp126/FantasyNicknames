@@ -1,6 +1,8 @@
 import React from "react";
-
 export default function Player() {
+  //  Object.keys(fantasyNicknames).forEach((items) => {
+  //   console.log(items)
+  // })
   return (
     <>
       <div className="player">
@@ -13,5 +15,5 @@ export default function Player() {
       </div>
     </>
     
-  );
+  )
 }
