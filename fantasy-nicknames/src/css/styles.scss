@@ -48,9 +48,6 @@ body {
     color: grey;
     font-style: italic;
 }
-.option {
-    color: red;
-}
 
 // * Player Component * //
 .player {
@@ -89,10 +86,57 @@ body {
     }
 }
 
+// * Player Small * //
+// * Player Component * //
+.playerSmall {
+    display: flex;
+    padding: 2rem 1rem 1rem;
+    border-bottom: 1.5px solid black;
+
+    &__picture {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+
+        &_img {
+            display: block;
+            object-fit: scale-down;
+            height: 100%;
+            width: 100%; // height: auto;
+            margin-top: -.5rem;
+        }
+
+    }
+
+    &__info {
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        &_name {
+            font-size: 1.2rem;
+            padding-bottom: .2rem;
+        }
+
+        &_type {
+            font-size: .7rem;
+            padding-bottom: 1rem;
+            font-weight: lighter;
+        }
+
+        &_number {
+            font-size: 1rem;
+        }
+    }
+}
+
+
+
 // * Main Page * // 
 main {
     margin: auto;
-    width: 90%;
+    width: 80%;
 }
 .mainText {
     margin: 1.5em 1rem 2rem;

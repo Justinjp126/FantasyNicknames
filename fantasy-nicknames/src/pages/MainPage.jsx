@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./Header"
-import Search from "./Search";
-import Player from "./Player";
+import Header from "../components/Header"
+import Search from "../components/Search";
+import Player from "../components/Player";
 import fantasyNicknames from "../fantasy-nicknames.json"
 export default function MainPage() {
   
