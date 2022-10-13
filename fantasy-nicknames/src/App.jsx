@@ -14,9 +14,7 @@ import './css/styles.min.css'
 function App() {
   return (
     <div className="App">
-      {/* <Nickname />
-      <MainPage /> */}
-      <C_KuppPage />
+      <MainPage />
     </div>
   )
 }

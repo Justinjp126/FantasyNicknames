@@ -3,7 +3,7 @@ import React from "react";
 export default function Navbar() {
   return (
     <>
-        <h1>Navbar</h1>
+        <img src="src/images/menu.svg" alt="Hamburger Menu" className="menu" />
     </>
     
   );

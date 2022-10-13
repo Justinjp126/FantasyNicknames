@@ -13,7 +13,7 @@ $text-white: #fff;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -27,13 +27,26 @@ body {
 .header {
     padding: .5rem .75rem;
     display: flex;
-    .header__nav {
+    &__nav {
         width: 100%;
         display: flex;
         justify-content: right;
+        &_profile {
+            margin-top: .65rem;
+        }
     }
+    &__logo {
+        width: 3rem;
+    }
+    padding: 1.5rem 0;
+    
 }
 
+// * Navbar Component * // 
+.menu {
+    margin-left: 2rem;
+    width: 1.75rem;
+}
 // * Search Component * //
 .search {
     background-color: transparent;
