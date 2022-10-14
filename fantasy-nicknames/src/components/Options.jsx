@@ -1,6 +1,5 @@
 import React from "react";
 export default function Options(props) {
-   console.log(props)
    return (
     <>
       <option value={props.items} className="option"></option>
