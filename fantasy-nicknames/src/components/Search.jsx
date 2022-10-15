@@ -9,6 +9,7 @@ export default function Search() {
   const names = namesArray.map((items) => {
     return (
       <Options 
+      key={items}
       items={items}
       />
     )
