@@ -17,7 +17,10 @@ export default function Search() {
   return (
     <>
     <form action="">
-      <input placeholder="Enter Player Name" list="search_bar" name="searchBar" id="searchBar" className="search" />
+      <div className="searchBarContainer">
+        <input placeholder="Enter Player Name" list="search_bar" name="searchBar" id="searchBar" className="search" />
+        <img src="src/images/search.svg" alt="Search Icon" className="searchBarContainer__icon" />
+      </div>
       <datalist id="search_bar">
         {names}
       </datalist>

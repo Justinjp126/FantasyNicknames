@@ -48,6 +48,17 @@ body {
     width: 1.75rem;
 }
 // * Search Component * //
+.searchBarContainer {
+    position: relative;
+    display: flex;
+    &__icon {
+        position: absolute;
+        right: 1.5rem;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%)
+    }
+}
 .search {
     background-color: transparent;
     color: white;
@@ -66,7 +77,7 @@ body {
 .player {
     background-color: lighten(black, 20%);
     display: flex;
-    padding: 1rem 1rem 1rem;
+    padding: 1.25rem 1rem 1rem;
     border-bottom: 1.5px solid black;
     &__picture {
         display: flex;
