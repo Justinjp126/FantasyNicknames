@@ -63,20 +63,36 @@ main {
         font-size: .9rem;
         font-weight: 200;
     }
-    &__btn {
-        background-color: lighten(black, 20%);
-        border-radius: .2rem;
-        font-weight: 100;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
+    &__container {
+        display: flex;
+        justify-content: center;
+        cursor: default;
+        margin: 2rem 0;
         text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        letter-spacing: .5px;
-        margin: 2rem 2rem 0 2rem;
+        &_btn {
+            background-color: lighten(black, 20%);
+            border-radius: .2rem;
+            font-weight: 100;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            letter-spacing: .5px;
+            margin: 0rem 2rem 0 2rem;
+            transition: ease-in .1s;
+            cursor: pointer;
+        }
+
+        &_btn:hover,
+        &_btn:focus {
+            background-color: lighten(black, 15%);
+            transition: ease-in .2s;
+        }
     }
+    
 }
 
 // * Components * //

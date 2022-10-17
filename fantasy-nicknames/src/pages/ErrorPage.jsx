@@ -1,5 +1,7 @@
 import React from "react";
 import Header from "../components/Header"
+import { Outlet, Link } from "react-router-dom";
+
 export default function ErrorPage() {
   
   return (
@@ -9,7 +11,9 @@ export default function ErrorPage() {
         <div className="error">
           <h1 className="error__title">Oops</h1>
           <p className="error__description">This page doesn't exist :(</p>
-          <button className="error__btn">BACK TO HOME</button>
+          <Link to={`/`} className="error__container">
+            <button className="error__container_btn">BACK TO HOME</button>
+          </Link>
         </div>
       </main>
       
