@@ -7,6 +7,15 @@
 
 // * Variables * // 
 $text-white: #fff;
+$thin: 100;
+$extra-light: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
 
 // * Global Styles * //
 * {
@@ -19,6 +28,7 @@ $text-white: #fff;
 body {
     color: $text-white;
     background-color: lighten(black, 10%);
+    overflow-x: hidden;
 }
 
 li {
@@ -141,7 +151,7 @@ main {
 }
 
 #menuToggle a:hover {
-    color: tomato;
+    color: lighten(#232323, 10%);
 }
 
 
@@ -167,12 +177,10 @@ main {
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    background: #cdcdcd;
+    background: #ebebeb;
     border-radius: 3px;
     z-index: 1;
-
     transform-origin: 4px 0px;
-
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
         background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
         opacity 0.55s ease;
@@ -221,14 +229,13 @@ main {
     margin: -100px 0 0 -200px;
     padding: 50px;
     padding-top: 125px;
-
+    border-radius: .5rem;
     background: #ededed;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
     transform-origin: 0% 0%;
     transform: translate(101%, 0);
-
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
 
@@ -314,6 +321,7 @@ main {
     padding: 2rem 1rem 1rem;
 
     &__picture {
+        margin-top: .2rem;
         display: flex;
         justify-content: center;
         width: 50%;
@@ -322,7 +330,7 @@ main {
             display: block;
             object-fit: scale-down;
             height: 100%;
-            width: 100%; // height: auto;
+            width: 100%; 
             margin-top: -.5rem;
         }
 
@@ -335,18 +343,21 @@ main {
         width: 50%;
 
         &_name {
-            font-size: 1.2rem;
+            font-weight: $semi-bold;
+            font-size: 1.1rem;
             padding-bottom: .2rem;
         }
 
         &_type {
-            font-size: .7rem;
-            padding-bottom: 1rem;
-            font-weight: lighter;
+            font-size: .6rem;
+            font-weight: 200;
         }
 
         &_number {
-            font-size: 1rem;
+            margin-top: auto;
+            font-weight: $medium;
+            font-size: .75em;
+            margin-bottom: .5rem;
         }
     }
 }
