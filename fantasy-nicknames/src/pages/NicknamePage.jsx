@@ -1,6 +1,9 @@
 import React from "react";
 import Nickname from "../components/Nickname"
+import Header from "../components/Header"
+import Search from "../components/Search"
 import fantasyNicknames from "../fantasy-nicknames.json"
+import PlayerSmall from "../components/PlayerSmall"
 export default function NicknamePage() {
   //put names into array
   var namesArray = []
@@ -16,9 +19,18 @@ export default function NicknamePage() {
   }
 
   //create 
-  const names = nicknamesArray.map((items) => {
+  const names = nicknamesArray.map((items, index) => {
     return (
-      <Nickname items={items} />
+      <>
+      <main>
+        <Header />
+        <Search />
+        <PlayerSmall items={items.name} />
+      </main>
+      
+      <Nickname key={index} items={items} />
+
+      </>
     )
   })
   return (

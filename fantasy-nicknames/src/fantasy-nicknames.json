@@ -422,7 +422,9 @@
             "Homo-Dre-pians",
             "No Taylors Allowed"
         ],
-        "key": 11
+        "key": 11,
+        "type": "RB",
+        "number": 32
     },
     "Travis Kelce": {
         "name": "Travis Kelce",
@@ -460,7 +462,9 @@
             "Oh Say Can You Kelce",
             "TKO"
         ],
-        "key": 12
+        "key": 12,
+        "type": "TE",
+        "number": 87
     },
     "Mark Andrews": {
         "name": "Mark Andrews",
@@ -506,7 +510,9 @@
             "Drew Man",
             "All The Marksmen"
         ],
-        "key": 13
+        "key": 13,
+        "type": "TE",
+        "number": 89
     },
     "Joe Mixon": {
         "name": "Joe Mixon",
@@ -537,7 +543,9 @@
             "Joe Mixon's Punch Out",
             "In the Mixon"
         ],
-        "key": 14
+        "key": 14,
+        "type": "RB",
+        "number": 28
     },
     "Mike Evans": {
         "name": "Mike Evans",
@@ -551,7 +559,9 @@
             "Gates of Evans",
             "7-El-Evans"
         ],
-        "key": 15
+        "key": 15,
+        "type": "WR",
+        "number": 13
     },
     "Tyreek Hill": {
         "name": "Tyreek Hill",
@@ -597,7 +607,9 @@
             "Raise a little Hill",
             "Tyreek of Exhaust"
         ],
-        "key": 16
+        "key": 16,
+        "type": "WR",
+        "number": 10
     },
     "Deebo Samuel": {
         "name": "Deebo Samuel",
@@ -643,7 +655,9 @@
             "Boeing for the Kill",
             "The Book of Samuel"
         ],
-        "key": 17
+        "key": 17,
+        "type": "WR",
+        "number": 19
     },
     "Keenan Allen": {
         "name": "Keenan Allen",
@@ -658,7 +672,9 @@
             "Keenan & Kel",
             "Allen-tents and Purposes"
         ],
-        "key": 18
+        "key": 18,
+        "type": "WR",
+        "number": 13
     },
     "Leonard Fournette": {
         "name": "Leonard Fournette",
@@ -672,7 +688,9 @@
             "Don\u2019t You Fournette About Me",
             "Fournette Flix and Chill"
         ],
-        "key": 19
+        "key": 19,
+        "type": "RB",
+        "number": 7
     },
     "Terry McLaurin": {
         "name": "Terry McLaurin",
@@ -703,7 +721,9 @@
             "Terry Potter and the Half-Blood Prince",
             "Terry Potter and the Deathly Hallows"
         ],
-        "key": 20
+        "key": 20,
+        "type": "WR",
+        "number": 17
     },
     "Diontae Johnson": {
         "name": "Diontae Johnson",
@@ -720,7 +740,9 @@
             "The Dionte Hall Problem",
             "DJ YAC"
         ],
-        "key": 21
+        "key": 21,
+        "type": "WR",
+        "number": 18
     },
     "Aaron Jones": {
         "name": "Aaron Jones",
@@ -732,7 +754,9 @@
             "Game of Jones",
             "You Done Messed Up A-Aron"
         ],
-        "key": 22
+        "key": 22,
+        "type": "RB",
+        "number": 33
     },
     "Ezekiel Elliott": {
         "name": "Ezekiel Elliott",
@@ -749,7 +773,9 @@
             "A Zeke Outlook",
             "Zeke of Nature"
         ],
-        "key": 23
+        "key": 23,
+        "type": "RB",
+        "number": 21
     },
     "Kyle Pitts": {
         "name": "Kyle Pitts",
@@ -763,7 +789,9 @@
             "Pitts and Giggles",
             "This Team\u2019s the Pitts"
         ],
-        "key": 24
+        "key": 24,
+        "type": "TE",
+        "number": 8
     },
     "AJ Brown": {
         "name": "AJ Brown",
@@ -777,7 +805,9 @@
             "What Can Brown Do For You?",
             "A.J. Brown Note"
         ],
-        "key": 25
+        "key": 25,
+        "type": "WR",
+        "number": 11
     },
     "Cam Akers": {
         "name": "Cam Akers",
@@ -791,7 +821,9 @@
             "All in the Camily",
             "The Macho Cam"
         ],
-        "key": 26
+        "key": 26,
+        "type": "RB",
+        "number": 3
     },
     "James Conner": {
         "name": "James Conner",
@@ -805,7 +837,9 @@
             "Pros and Conners",
             "Comic-Conner"
         ],
-        "key": 27
+        "key": 27,
+        "type": "RB",
+        "number": 6
     },
     "Saquon Barkley": {
         "name": "Saquon Barkley",
@@ -836,7 +870,9 @@
             "The Wrath of Quon",
             "Saquon Deez Nuts"
         ],
-        "key": 28
+        "key": 28,
+        "type": "RB",
+        "number": 26
     },
     "Josh Allen": {
         "name": "Josh Allen",
@@ -885,7 +921,9 @@
             "The Josh Tree",
             "It's Allen the Hips"
         ],
-        "key": 29
+        "key": 29,
+        "type": "QB",
+        "number": 17
     },
     "Nick Chubb": {
         "name": "Nick Chubb",
@@ -931,7 +969,9 @@
             "Morning Chubb",
             "Old Saint Nick"
         ],
-        "key": 30
+        "key": 30,
+        "type": "RB",
+        "number": 24
     },
     "DK Metcalf": {
         "name": "DK Metcalf",
@@ -977,7 +1017,9 @@
             "Hawk Blockers",
             "12th Men"
         ],
-        "key": 31
+        "key": 31,
+        "type": "WR",
+        "number": 14
     },
     "DJ Moore": {
         "name": "DJ Moore",
@@ -991,7 +1033,9 @@
             "Moore Money Moore Problems",
             "DJ Got Us Fallin in Love"
         ],
-        "key": 32
+        "key": 32,
+        "type": "WR",
+        "number": 2
     },
     "Josh Jacobs": {
         "name": "Josh Jacobs",
@@ -1025,7 +1069,9 @@
             "LL Cool Jacobs",
             "Corn on the Jacobs"
         ],
-        "key": 33
+        "key": 33,
+        "type": "RB",
+        "number": 28
     },
     "Clyde Edwards-Helaire": {
         "name": "Clyde Edwards-Helaire",
@@ -1040,7 +1086,9 @@
             "You're Helaire-ious",
             "That's Edwards-Helairious"
         ],
-        "key": 34
+        "key": 34,
+        "type": "RB",
+        "number": 25
     },
     "Darren Waller": {
         "name": "Darren Waller",
@@ -1052,7 +1100,9 @@
             "Waller Alert",
             "Big Waller Brand"
         ],
-        "key": 35
+        "key": 35,
+        "type": "TE",
+        "number": 83
     },
     "George Kittle": {
         "name": "George Kittle",
@@ -1083,7 +1133,9 @@
             "The Kittle Mermaids",
             "Kittle Red Running Hoods"
         ],
-        "key": 36
+        "key": 36,
+        "type": "TE",
+        "number": 85
     },
     "Cordarrelle Patterson": {
         "name": "Cordarrelle Patterson",
@@ -1097,7 +1149,9 @@
             "Cordarelle Pounder With Cheese",
             "Golden Cordarelle Buffet"
         ],
-        "key": 37
+        "key": 37,
+        "type": "WR/RB",
+        "number": 84
     },
     "Tee Higgins": {
         "name": "Tee Higgins",
@@ -1143,7 +1197,9 @@
             "Chase Your Ja'reams",
             "Burrowing Down"
         ],
-        "key": 38
+        "key": 38,
+        "type": "WR",
+        "number": 85
     },
     "Elijah Mitchell": {
         "name": "Elijah Mitchell",
@@ -1153,7 +1209,9 @@
             "Karmas a Mitchell",
             "Mitchell Perfect"
         ],
-        "key": 39
+        "key": 39,
+        "type": "RB",
+        "number": 25
     },
     "Justin Herbert": {
         "name": "Justin Herbert",
@@ -1196,7 +1254,9 @@
             "His and Herbs",
             "Herb Garden"
         ],
-        "key": 40
+        "key": 40,
+        "type": "QB",
+        "number": 10
     },
     "Patrick Mahomes": {
         "name": "Patrick Mahomes",
@@ -1227,7 +1287,9 @@
             "Mahomes on the Range",
             "Mahomes Don't Play That"
         ],
-        "key": 41
+        "key": 41,
+        "type": "QB",
+        "number": 15
     },
     "Jaylen Waddle": {
         "name": "Jaylen Waddle",
@@ -1239,7 +1301,9 @@
             "Waddle House",
             "Waddle Around Town"
         ],
-        "key": 42
+        "key": 42,
+        "type": "WR",
+        "number": 17
     },
     "Lamar Jackson": {
         "name": "Lamar Jackson",
@@ -1285,7 +1349,9 @@
             "The Era of 8",
             "Eight is Enough"
         ],
-        "key": 43
+        "key": 43,
+        "type": "QB",
+        "number": 8
     },
     "Jalen Hurts": {
         "name": "Jalen Hurts",
@@ -1316,7 +1382,9 @@
             "Hope This Hurts",
             "Jal-Enter Sandman"
         ],
-        "key": 44
+        "key": 44,
+        "type": "QB",
+        "number": 1
     },
     "Kyler Murray": {
         "name": "Kyler Murray",
@@ -1343,7 +1411,9 @@
             "The Murray see ya, the more we like ya",
             "Kyler on the Loose"
         ],
-        "key": 45
+        "key": 45,
+        "type": "QB",
+        "number": 1
     },
     "Jared Goff": {
         "name": "Jared Goff",
@@ -1358,7 +1428,9 @@
             "Goff to See The Wizard",
             "Goffensive MVP"
         ],
-        "key": 46
+        "key": 46,
+        "type": "QB",
+        "number": 16
     },
     "Joe Burrow": {
         "name": "Joe Burrow",
@@ -1389,7 +1461,9 @@
             "My Burrow is Thorough",
             "Burrow's Churros"
         ],
-        "key": 47
+        "key": 47,
+        "type": "QB",
+        "number": 9
     },
     "Tua Tagovailoa": {
         "name": "Tua Tagovailoa",
@@ -1420,7 +1494,9 @@
             "One, Tua, Three",
             "Tua Hearts"
         ],
-        "key": 48
+        "key": 48,
+        "type": "QB",
+        "number": 1
     },
     "Tom Brady": {
         "name": "Tom Brady",
@@ -1466,7 +1542,9 @@
             "game changers team Brady",
             "Brady's Deadly Team"
         ],
-        "key": 49
+        "key": 49,
+        "type": "QB",
+        "number": 12
     },
     "Amon-Ra St. Brown": {
         "name": "Amon-Ra St. Brown",
@@ -1499,7 +1577,9 @@
             "Browntasaruses",
             "Brownie Troop"
         ],
-        "key": 50
+        "key": 50,
+        "type": "WR",
+        "number": 14
     },
     "Kareem Hunt": {
         "name": "Kareem Hunt",
@@ -1520,7 +1600,9 @@
             "Berries & Kareem",
             "Kareem Cheese"
         ],
-        "key": 51
+        "key": 51,
+        "type": "RB",
+        "number": 27
     },
     "James Robinson": {
         "name": "James Robinson",
@@ -1530,7 +1612,9 @@
             "Swiss Family Robinson",
             "Cops & Robinsons"
         ],
-        "key": 52
+        "key": 52,
+        "type": "RB",
+        "number": 30
     },
     "TJ Hockenson": {
         "name": "TJ Hockenson",
@@ -1549,7 +1633,9 @@
             "For Those About to Hock",
             "Goff Hock Yourself"
         ],
-        "key": 53
+        "key": 53,
+        "type": "TE",
+        "number": 88
     },
     "George Pickens": {
         "name": "George Pickens",
@@ -1558,7 +1644,9 @@
             "Slim Pickens",
             "Picken Fights"
         ],
-        "key": 54
+        "key": 54,
+        "type": "WR",
+        "number": 14
     },
     "Austin Ekeler": {
         "name": "Austin Ekeler",
@@ -1590,7 +1678,9 @@
             "Austin 3:16",
             "Eks Men United"
         ],
-        "key": 55
+        "key": 55,
+        "type": "RB",
+        "number": 30
     },
     "Dalvin Cook": {
         "name": "Dalvin Cook",
@@ -1619,6 +1709,8 @@
             "Dalvin Me Crazy",
             "Captain Cook"
         ],
-        "key": 56
+        "key": 56,
+        "type": "RB",
+        "number": 4
     }
 }

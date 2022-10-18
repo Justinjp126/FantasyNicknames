@@ -9,12 +9,13 @@ export default function Nickname(props) {
 
   return (
     <>
-      <ul>
+    <div className="nickname">
+      <ol className="nickname__ol" id={props.items.nickname}>
         {props.items.nicknames.map(nickname => (
-          <li>{nickname}</li>
+          <li className="nickname__ol_li">{nickname}</li>
         ))}
-      </ul>
-      <br />
+      </ol>
+    </div> 
     </>
     
   );

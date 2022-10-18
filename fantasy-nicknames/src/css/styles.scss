@@ -21,6 +21,10 @@ body {
     background-color: lighten(black, 10%);
 }
 
+li {
+    display: list-item;
+    list-style-position: inside;
+}
 // *** Styles *** //
 
 // * Pages *//
@@ -361,6 +365,24 @@ main {
             font-size: .8rem;
             color: $text-white;
             text-decoration: underline;
+        }
+    }
+}
+
+// * Nickname Component * //
+.nickname {
+    color: $text-white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    &__ol {
+        &_li {
+            background-color: #2E2B2B;
+            padding: 1rem;
+        }
+        &_li:nth-child(even) {
+            background-color: #1C1C1C;
+
         }
     }
 }
