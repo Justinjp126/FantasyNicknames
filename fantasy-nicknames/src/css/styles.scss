@@ -312,7 +312,6 @@ main {
 .playerSmall {
     display: flex;
     padding: 2rem 1rem 1rem;
-    border-bottom: 1.5px solid black;
 
     &__picture {
         display: flex;
@@ -330,7 +329,7 @@ main {
     }
 
     &__info {
-        margin-left: 1rem;
+        margin-left: 2rem;
         display: flex;
         flex-direction: column;
         width: 50%;
@@ -374,15 +373,34 @@ main {
     color: $text-white;
     font-weight: 400;
     font-size: 1.2rem;
-    margin-top: 3rem;
+    margin-top:   1rem;
     &__ol {
+        list-style-type: none;
         &_li {
+            counter-increment: step-counter;
             background-color: #2E2B2B;
             padding: 1rem;
+            font-weight: 400;
         }
         &_li:nth-child(even) {
             background-color: #1C1C1C;
 
+        }
+        &_li::before {
+            content: counter(step-counter);
+            margin: 0 .75rem 0rem .5rem;
+            border-radius: 50%;
+            border: 2px solid #414141;
+            color: #e1e1e1;
+            padding: 2px;
+            font-size: 1rem;
+            font-weight: 400;
+            text-align: center;
+            display: inline-flex;
+            width: 2rem;
+            height: 2rem;
+            justify-content: center;
+            align-items: center;
         }
     }
 }
