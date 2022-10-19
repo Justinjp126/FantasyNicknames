@@ -27,7 +27,6 @@ export default function Player(props) {
     }
   }
 
-  console.log(nameObj.type)
   return (
     <>
       <div className="playerSmall">

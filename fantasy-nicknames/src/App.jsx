@@ -8,18 +8,24 @@ import MainPage from './pages/MainPage'
 import NicknamePage from './pages/NicknamePage'
 import ErrorPage from './pages/ErrorPage'
 import fantasyNicknames from "./fantasy-nicknames.json"
-import C_KuppPage from "./pages/C_KuppPage"
-import {   createBrowserRouter,
+import { 
+  createBrowserRouter,
   RouterProvider,
   Route } from "react-router-dom"
 import './css/styles.min.css'
 
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <NicknamePage />,
+    element: <MainPage />,
     errorElement: <ErrorPage />
   },
+  {
+    path: '/player/',
+    element: <NicknamePage />,
+    errorElement: <ErrorPage />,
+  }
 ]);
 
 function App() {

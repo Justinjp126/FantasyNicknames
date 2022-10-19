@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createContext } from "react";
 import fantasyNicknames from "../fantasy-nicknames.json"
 
 export default function Nickname(props) {
@@ -7,8 +7,11 @@ export default function Nickname(props) {
     namesArray.push(key)
   })
 
+  const PlayerNmae = createContext();
+
   return (
     <>
+    
     <div className="nickname">
       <ol className="nickname__ol" id={props.items.nickname}>
         {props.items.nicknames.map(nickname => (

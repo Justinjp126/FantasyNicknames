@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import fantasyNicknames from "../fantasy-nicknames.json"
 import Options from "./Options";
-export default function Search() {
+import { Form } from "react-router-dom"
+
+export default function Search({addPlayer}) {
   var namesArray = []
+  const [player, setPlayer] = useState("")
+
   Object.keys(fantasyNicknames).forEach(function(key,index) {
     namesArray.push(key)
   })
@@ -15,18 +19,27 @@ export default function Search() {
     )
   })
 
+  const handleChange = (event) => {
+      setPlayer(event.target.value);
+    };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    addPlayer(player);
+    setPlayer("");
+  };
+
   return (
     <>
-    <form action="">
-      <div className="searchBarContainer">
-        <input placeholder="Enter Player Name" list="search_bar" name="searchBar" id="searchBar" className="search" />
-        <img src="src/images/search.svg" alt="Search Icon" className="searchBarContainer__icon" />
-      </div>
-      <datalist id="search_bar">
-        {names}
-      </datalist>
-    </form>
-          
+      <Form method="get" action="/player" reloadDocument onSubmit={handleSubmit} onChange={handleChange} value={player}>
+        <div className="searchBarContainer">
+          <input placeholder="Enter Player Name" list="search_bar" name="searchBar" id="searchBar" className="search" />
+          <img src="src/images/search.svg" alt="Search Icon" className="searchBarContainer__icon" />
+        </div>
+        <datalist id="search_bar" name="datalist">
+          {names}
+        </datalist>
+      </Form>       
     </>
     
   );

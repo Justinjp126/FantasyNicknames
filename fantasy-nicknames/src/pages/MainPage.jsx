@@ -9,7 +9,7 @@ export default function MainPage() {
     <>
       <main>
         <Header />
-        <Search />
+        <Search addPlayer={"Cooper Kupp"}/>
         <div className="mainText">
           <h1 className="mainText__title">Popular Players</h1>
           <p className="mainText__text">Or search for your favorite players</p>

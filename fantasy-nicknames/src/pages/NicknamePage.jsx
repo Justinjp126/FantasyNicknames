@@ -4,7 +4,7 @@ import Header from "../components/Header"
 import Search from "../components/Search"
 import fantasyNicknames from "../fantasy-nicknames.json"
 import PlayerSmall from "../components/PlayerSmall"
-export default function NicknamePage() {
+export default function NicknamePage(props) {
   //put names into array
   var namesArray = []
   var nicknamesArray = []
@@ -22,9 +22,7 @@ export default function NicknamePage() {
   const names = nicknamesArray.map((items, index) => {
     return (
       <>
-      <main>
-        <Header />
-        <Search />
+      <main>  
         <PlayerSmall items={items.name} />
       </main>
       
@@ -35,6 +33,8 @@ export default function NicknamePage() {
   })
   return (
     <>
+      <Header />
+      <Search />
       {names}
     </>
     
