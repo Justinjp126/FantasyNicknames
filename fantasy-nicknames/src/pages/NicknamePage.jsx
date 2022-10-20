@@ -26,19 +26,7 @@ export default function NicknamePage(props) {
     nicknamesArray.push((fantasyNicknames[name]))
   }
 
-  //create 
-  const names = nicknamesArray.map((items, index) => {
-    return (
-      <>
-      <main>  
-        <PlayerSmall items={items.name} />
-      </main>
-      
-      <Nickname key={index} items={items} />
-
-      </>
-    )
-  })
+  console.log(fantasyNicknames[playerName])
   return (
     <>
       <main>

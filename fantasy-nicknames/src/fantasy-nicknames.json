@@ -1642,7 +1642,12 @@
         "nicknames": [
             "Pickens My Nose",
             "Slim Pickens",
-            "Picken Fights"
+            "Picken Fights",
+            "Pickens Me Up",
+            "Curious George",
+            "King George",
+            "My Favorite Pickens",
+            "Take Your Pickens"
         ],
         "key": 54,
         "type": "WR",
@@ -1712,5 +1717,22 @@
         "key": 56,
         "type": "RB",
         "number": 4
+    },
+    "Kenny Pickett": {
+        "name": "Kenny Pickett",
+        "nicknames": [
+            "Ken the New Big Ben",
+            "My Favorite Pickett",
+            "Pickett and Flick It",
+            "Kenny Two Gloves",
+            "Small Hands Kenny",
+            "Pickett a Fight",
+            "Take Your Pickett",
+            "Pickett Me Up",
+            "Pickett Up the Slack"
+        ],
+        "key": 57,
+        "type": "QB",
+        "number": 8
     }
 }
