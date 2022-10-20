@@ -10,15 +10,28 @@ export default function NicknamePage(props) {
   var namesArray = []
   var nicknamesArray = []
   const [searchParams] = useSearchParams()
-  const input = searchParams.get("searchBar");
-  var playerName = input.toLowerCase()
-    .split(' ')
-    .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
-    .join(' ');
+  var input = searchParams.get("searchBar");
 
   Object.keys(fantasyNicknames).forEach(function(key,index) {
     namesArray.push(key)
   })
+  
+  const namesArrayLowercase = namesArray.map(name => name.toLowerCase());
+  const inputLowercase = input.toLowerCase();
+
+  function checkPlayer(player) {
+    return age > 18;
+  }
+
+  //console.log(inputLowercase)
+  //console.log(namesArrayLowercase)
+  if(namesArrayLowercase.includes(inputLowercase)) {
+    for(var i = 0; i < namesArrayLowercase.length; i++) {
+      if(namesArrayLowercase[i] == inputLowercase) {
+        var playerName = namesArray[i]
+      }
+    }
+  }
 
   //grab each player using name as key
   for(var i = 0; i < namesArray.length; i++) {
@@ -26,7 +39,6 @@ export default function NicknamePage(props) {
     nicknamesArray.push((fantasyNicknames[name]))
   }
 
-  console.log(fantasyNicknames[playerName])
   return (
     <>
       <main>

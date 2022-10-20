@@ -122,14 +122,14 @@ main {
     padding: .5rem .75rem;
     display: flex;
     &__nav {
-
         display: flex;
         width: 100%;
+        align-items: center;
         &_profile {
             height: 2.25rem;
         }
         &_navbar {
-            margin-top: .5rem;
+            margin-top: .1rem;
             margin-left: auto;
         }
     }
@@ -168,20 +168,15 @@ main {
     position: absolute;
     cursor: pointer;
     opacity: 0;
-    /* hide this */
     z-index: 2;
-    /* and place it over the hamburger */
     -webkit-touch-callout: none;
 }
 
-/*
- * Just a quick hamburger
- */
 #menuToggle span {
     display: block;
     width: 2rem;
-    height: 4px;
-    margin-bottom: 5px;
+    height: .15rem;
+    margin-bottom: .5rem;
     position: relative;
     background: #ebebeb;
     border-radius: 3px;
@@ -191,6 +186,7 @@ main {
         background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
         opacity 0.55s ease;
 }
+
 
 #menuToggle span:first-child {
     transform-origin: 0% 0%;
@@ -206,7 +202,7 @@ main {
  */
 #menuToggle input:checked~span {
     opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
+    transform: rotate(47deg) translate(-0px, -1px);
     background: #232323;
 }
 
