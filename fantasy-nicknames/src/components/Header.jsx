@@ -9,7 +9,7 @@ export default function Header() {
           <img className="header__logo" src="src/images/logo.svg" alt="Logo"/>
         </Link>
         <div className="header__nav">
-            <img className="header__nav_profile" src="src/images/profile.svg" alt="Profile" />
+            <img className="header__nav_profile" src="src/images/profile-cropped.svg" alt="Profile" />
             <Navbar />
         </div>
     </header>
