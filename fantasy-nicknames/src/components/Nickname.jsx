@@ -7,13 +7,13 @@ export default function Nickname(props) {
     namesArray.push(key)
   })
 
-  const PlayerNmae = createContext();
+  console.log(props)
 
   return (
     <>
     
     <div className="nickname">
-      <ol className="nickname__ol" id={props.items.nickname}>
+      <ol className="nickname__ol" id={props.items}>
         {props.items.nicknames.map(nickname => (
           <li className="nickname__ol_li">{nickname}</li>
         ))}

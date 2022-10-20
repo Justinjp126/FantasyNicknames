@@ -31,7 +31,7 @@ export default function Search({addPlayer}) {
 
   return (
     <>
-      <Form method="get" action="/player" reloadDocument onSubmit={handleSubmit} onChange={handleChange} value={player}>
+      <Form method="get" action="/player" reloadDocument >
         <div className="searchBarContainer">
           <input placeholder="Enter Player Name" list="search_bar" name="searchBar" id="searchBar" className="search" />
           <img src="src/images/search.svg" alt="Search Icon" className="searchBarContainer__icon" />

@@ -4,10 +4,18 @@ import Header from "../components/Header"
 import Search from "../components/Search"
 import fantasyNicknames from "../fantasy-nicknames.json"
 import PlayerSmall from "../components/PlayerSmall"
+import { useSearchParams } from "react-router-dom";
 export default function NicknamePage(props) {
   //put names into array
   var namesArray = []
   var nicknamesArray = []
+  const [searchParams] = useSearchParams()
+  const input = searchParams.get("searchBar");
+  var playerName = input.toLowerCase()
+    .split(' ')
+    .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+    .join(' ');
+
   Object.keys(fantasyNicknames).forEach(function(key,index) {
     namesArray.push(key)
   })
@@ -33,9 +41,12 @@ export default function NicknamePage(props) {
   })
   return (
     <>
-      <Header />
-      <Search />
-      {names}
+      <main>
+        <Header />
+        <Search />
+        <PlayerSmall items={playerName} />
+      </main>
+      <Nickname key={playerName} items={fantasyNicknames[playerName]} />
     </>
     
   );
