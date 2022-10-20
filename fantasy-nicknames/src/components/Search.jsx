@@ -33,8 +33,8 @@ export default function Search({addPlayer}) {
     <>
       <Form method="get" action="/player" reloadDocument >
         <div className="searchBarContainer">
-          <input placeholder="Enter Player Name" list="search_bar" name="searchBar" id="searchBar" className="search" />
-          <img src="src/images/search.svg" alt="Search Icon" className="searchBarContainer__icon" />
+          <input autoComplete="off" placeholder="Enter Player Name" list="search_bar" name="searchBar" id="searchBar" className="search" />
+          <input type="image" src="src/images/search.svg" alt="Search Icon" className="searchBarContainer__icon" />
         </div>
         <datalist id="search_bar" name="datalist">
           {names}
