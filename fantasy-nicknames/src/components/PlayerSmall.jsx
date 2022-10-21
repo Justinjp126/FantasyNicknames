@@ -5,6 +5,10 @@ export default function Player(props) {
   var firstInitial = playerName.substring(0,1)
   var lastName = playerName.substring(playerName.indexOf(" ") + 1, playerName.length)
   var playerURL = (firstInitial + "_" + lastName).toLowerCase()
+
+  if(playerName == "Amon-Ra St. Brown") {
+    playerURL = "am_brown"
+  }
   
   //put names into array
   var namesArray = []

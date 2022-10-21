@@ -218,7 +218,7 @@ main {
  * Ohyeah and the last one should go the other direction
  */
 #menuToggle input:checked~span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(0, -1px);
+    transform: rotate(-45deg) translate(2px, -1px);
 }
 
 /*
