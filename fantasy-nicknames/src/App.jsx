@@ -8,11 +8,14 @@ import MainPage from './pages/MainPage'
 import NicknamePage from './pages/NicknamePage'
 import ErrorPage from './pages/ErrorPage'
 import fantasyNicknames from "./fantasy-nicknames.json"
+import { getDatabase, ref, onValue, get} from "firebase/database";
+
 import { 
   createBrowserRouter,
   RouterProvider,
   Route } from "react-router-dom"
-import './css/styles.min.css'
+
+  import './css/styles.min.css'
 
 
 const router = createBrowserRouter([
