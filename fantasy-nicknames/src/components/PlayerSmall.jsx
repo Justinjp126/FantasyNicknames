@@ -31,6 +31,8 @@ export default function Player(props) {
     }
   }
 
+  
+
   return (
     <>
       <div className="playerSmall">

@@ -1,11 +1,13 @@
 import React from "react";
 export default function Player(props) {
-  var playerName = props.items.name 
-  var firstInitial = playerName.substring(0,1)
-  var lastName = playerName.substring(playerName.indexOf(" ") + 1, playerName.length)
-  var playerURL = (firstInitial + "_" + lastName).toLowerCase()
 
-  return (
+
+  if (props.items !== "loadingMainPage") {
+    var playerName = props.items.name 
+    var firstInitial = playerName.substring(0,1)
+    var lastName = playerName.substring(playerName.indexOf(" ") + 1, playerName.length)
+    var playerURL = (firstInitial + "_" + lastName).toLowerCase()
+    return (
     <>
       <div className="player">
         <div className="player__picture">
@@ -17,7 +19,19 @@ export default function Player(props) {
           <h3 className="player__info_number" id={props.items.number}>{'#' + props.items.number}</h3>
         </div>
       </div>
-    </>
-    
+    </>    
   )
+  } else {
+    var props = {
+      items: {
+      key: 0,
+      name: "LOADING",
+      number: 0,
+      type: "NA"
+      }
+    }
+
+    return <h1>Loading</h1>
+  }
+  
 }
