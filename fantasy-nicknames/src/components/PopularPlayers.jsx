@@ -23,30 +23,37 @@ export default function PopularPlayers(namesList) {
         return "/player?searchBar=" + playerName[0] + "+" + playerName[1];
     }
 
+    function addTransition() {
+        let div = document.getElementById("popularPlayerDiv");
+        div.classList.add("fade-in");
+
+    }
+
     if (names.length) {
          return (
         <>
-            <Link to={getPlayerLink("Josh Allen")}>
-            <Player items={names.find(n => n.name === "Josh Allen")}></Player>
-            </Link>
-            <Link to={getPlayerLink("Cooper Kupp")}>
-            <Player items={names.find(n => n.name === "Cooper Kupp")}></Player>
-            </Link>
-            <Link to={getPlayerLink("Stefon Diggs")}>
-            <Player items={names.find(n => n.name === "Stefon Diggs")}></Player>
-            </Link>
-            <Link to={getPlayerLink("Lamar Jackson")}>
-            <Player items={names.find(n => n.name === "Lamar Jackson")}></Player>
-            </Link>
-            <Link to={getPlayerLink("Jalen Hurts")}>
-            <Player items={names.find(n => n.name === "Jalen Hurts")}></Player>
-            </Link>
+            <div className="popularPlayers transitionPlayers" id="popularPlayerDiv" onLoad={addTransition}>
+                <Link to={getPlayerLink("Josh Allen")}>
+                <Player items={names.find(n => n.name === "Josh Allen")}></Player>
+                </Link>
+                <Link to={getPlayerLink("Cooper Kupp")}>
+                <Player items={names.find(n => n.name === "Cooper Kupp")}></Player>
+                </Link>
+                <Link to={getPlayerLink("Stefon Diggs")}>
+                <Player items={names.find(n => n.name === "Stefon Diggs")}></Player>
+                </Link>
+                <Link to={getPlayerLink("Lamar Jackson")}>
+                <Player items={names.find(n => n.name === "Lamar Jackson")}></Player>
+                </Link>
+                <Link to={getPlayerLink("Jalen Hurts")}>
+                <Player items={names.find(n => n.name === "Jalen Hurts")}></Player>
+                </Link>
+            </div>
         </>
         ) 
     } else {
         return (
            <div className="loadingScreen">
-                <img className="loadingScreen__img" src="src/images/loading.png" alt="Fantasy Nicknames" />
            </div>
         )
     }   

@@ -297,6 +297,22 @@ main {
 }
 
 // * Player Component * //
+.popularPlayers {
+    opacity: 0;
+    animation: fade 500ms ease-out forwards;
+}
+.fade-in {
+    animation: fade 500ms ease-out forwards;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    } 
+    100% {
+        opacity: 1;
+    }
+}
 .player {
     background-color: lighten(black, 20%);
     display: flex;
