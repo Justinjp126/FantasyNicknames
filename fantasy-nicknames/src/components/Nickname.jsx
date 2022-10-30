@@ -1,20 +1,13 @@
-import React, { createContext } from "react";
-import fantasyNicknames from "../fantasy-nicknames.json"
+import React from "react";
 
 export default function Nickname(props) {
-  var namesArray = []
-  Object.keys(fantasyNicknames).forEach(function(key,index) {
-    namesArray.push(key)
-  })
-
-  console.log(props)
+  const nicknamesArray = Object.values(props.items.nicknames)
 
   return (
     <>
-    
     <div className="nickname">
       <ol className="nickname__ol" id={props.items}>
-        {props.items.nicknames.map(nickname => (
+        {nicknamesArray.map(nickname => (
           <li className="nickname__ol_li">{nickname}</li>
         ))}
       </ol>
