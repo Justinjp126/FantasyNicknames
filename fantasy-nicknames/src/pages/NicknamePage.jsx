@@ -15,42 +15,7 @@ export default function NicknamePage(props) {
   var nicknamesArray = []
   const [searchParams] = useSearchParams()
   var input = searchParams.get("searchBar");
-
-  Object.keys(fantasyNicknames).forEach(function(key,index) {
-    namesArray.push(key)
-  })
-  
-  const namesArrayLowercase = namesArray.map(name => name.toLowerCase());
-  const inputLowercase = input.toLowerCase();
-
-  if(namesArrayLowercase.includes(inputLowercase)) {
-    for(var i = 0; i < namesArrayLowercase.length; i++) {
-      if(namesArrayLowercase[i] == inputLowercase) {
-        var playerName = namesArray[i]
-      }
-    }
-  }
-
-  //grab each player using name as key
-  for(var i = 0; i < namesArray.length; i++) {
-    const name = namesArray[i]
-    nicknamesArray.push((fantasyNicknames[name]))
-  }
-
-
-  //  const [names, setNames] = useState([])
- 
-  //   useEffect(() => {
-  //   onValue(ref(db), snapshot => {
-  //       const data = snapshot.val();
-  //       if(data !== null) {
-  //       Object.values(data).map((names) => {
-  //           setNames(oldArray => [...oldArray, names])
-  //       });
-  //       }
-  //   })
-  //   }, [])
-
+  var playerName = input
 
   const dbRef = ref(db, "/" + input);
   const products = useDatabaseSnapshot(["/" + input], dbRef);

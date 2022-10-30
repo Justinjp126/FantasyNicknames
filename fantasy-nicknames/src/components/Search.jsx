@@ -1,16 +1,25 @@
 import React, { useState } from "react";
-import fantasyNicknames from "../fantasy-nicknames.json"
 import Options from "./Options";
 import { Form } from "react-router-dom"
+import { useDatabaseSnapshot } from "@react-query-firebase/database";
+import { db } from "../firebase"
+import { ref } from "firebase/database";
 
-export default function Search({addPlayer}) {
-  var namesArray = []
-  const [player, setPlayer] = useState("")
+export default function Search() {
+  const dbRef = ref(db, "/" );
+  const products = useDatabaseSnapshot(["/" ], dbRef);
 
-  Object.keys(fantasyNicknames).forEach(function(key,index) {
-    namesArray.push(key)
-  })
-  const names = namesArray.map((items) => {
+  if (products.isLoading) {
+    return <div>Loading...</div>;
+  }
+  // DataSnapshot
+  const playerObject = products.data;
+  const json = (JSON.stringify(playerObject))
+  const jsonParse = JSON.parse(json);
+
+  var newArray = Object.keys(jsonParse)
+
+  const newName = newArray.map((items) => {
     return (
       <Options 
       key={items}
@@ -18,17 +27,7 @@ export default function Search({addPlayer}) {
       />
     )
   })
-
-  const handleChange = (event) => {
-      setPlayer(event.target.value);
-    };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    addPlayer(player);
-    setPlayer("");
-  };
-
+  
   return (
     <>
       <Form method="get" action="/player"  >
@@ -37,7 +36,7 @@ export default function Search({addPlayer}) {
           <input type="image" src="src/images/search.svg" alt="Search Icon" className="searchBarContainer__icon" />
         </div>
         <datalist id="search_bar" name="datalist">
-          {names}
+          {newName}
         </datalist>
       </Form>       
     </>
