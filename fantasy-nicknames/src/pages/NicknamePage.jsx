@@ -2,14 +2,13 @@ import React, { useState, useEffect } from "react";
 import Nickname from "../components/Nickname"
 import Header from "../components/Header"
 import Search from "../components/Search"
-import fantasyNicknames from "../fantasy-nicknames.json"
 import PlayerSmall from "../components/PlayerSmall"
 import { useSearchParams } from "react-router-dom";
 import { useDatabaseSnapshot } from "@react-query-firebase/database";
 import { db } from "../firebase"
 import { ref } from "firebase/database";
 
-export default function NicknamePage(props) {
+export default function NicknamePage() {
   //put names into array
   var namesArray = []
   var nicknamesArray = []

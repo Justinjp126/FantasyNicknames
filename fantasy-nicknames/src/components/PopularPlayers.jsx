@@ -39,6 +39,9 @@ export default function PopularPlayers(namesList) {
                 <Link to={getPlayerLink("Cooper Kupp")}>
                 <Player items={names.find(n => n.name === "Cooper Kupp")}></Player>
                 </Link>
+                <Link to={getPlayerLink("Josh Jacobs")}>
+                <Player items={names.find(n => n.name === "Josh Jacobs")}></Player>
+                </Link>
                 <Link to={getPlayerLink("Stefon Diggs")}>
                 <Player items={names.find(n => n.name === "Stefon Diggs")}></Player>
                 </Link>
@@ -47,6 +50,12 @@ export default function PopularPlayers(namesList) {
                 </Link>
                 <Link to={getPlayerLink("Jalen Hurts")}>
                 <Player items={names.find(n => n.name === "Jalen Hurts")}></Player>
+                </Link>
+                <Link to={getPlayerLink("Travis Kelce")}>
+                <Player items={names.find(n => n.name === "Travis Kelce")}></Player>
+                </Link>
+                <Link to={getPlayerLink("Tyreek Hill")}>
+                <Player items={names.find(n => n.name === "Tyreek Hill")}></Player>
                 </Link>
             </div>
         </>
