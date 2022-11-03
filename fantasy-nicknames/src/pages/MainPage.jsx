@@ -9,15 +9,16 @@ export default function MainPage() {
     <>
       <main>
         <Header />
-        <div className="mainText">
-          <h1 className="mainText__title">Fantasy Nicknames</h1>
-          <p className="mainText__text">Search for your favorite NFL player</p>
-        </div>
-        <Search />
-
+        <section>
+          <div className="mainText">
+            <h1 className="mainText__title">Fantasy Nicknames</h1>
+            <p className="mainText__text">Search for your favorite NFL player</p>
+          </div>
+          <Search />
+          <PopularPlayers />
+      </section>
       </main>
-      <PopularPlayers />
-      
+
     </>
     
   );

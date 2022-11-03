@@ -75,9 +75,6 @@ main {
     }
 
 }
-.mainTextLarge {
-    display: none;
-}
 .error {
     text-align: center;
     height: 100%;
@@ -138,9 +135,8 @@ main {
 // * Components * //
 // * Header Component * //
 .header {
-    
-    padding: .5rem .75rem;
     display: flex;
+    padding: 2rem 0 0;
     &__nav {
         display: flex;
         width: 100%;
@@ -159,7 +155,6 @@ main {
     &__expand {
         display: none;
     }
-    padding: 1.5rem 0 0;
     
 }
 
@@ -501,6 +496,9 @@ main {
                             transform: scaleX(1);
                         }
                     }
+                    .active:hover {
+                        transform: scaleX(1);
+                    }
             }
             &_contact {
                 padding-right: 0rem;
@@ -508,7 +506,7 @@ main {
         }
     }
     .mainText {
-        margin: 2rem 1rem 1rem;
+        margin: 1.5rem 1rem 1rem;
 
         &__title {
             font-size: 3.25rem;
@@ -530,10 +528,54 @@ main {
 
 /* Big screen devices (889px and above) */
 @media only screen and (min-width: 889px) {
-    
+    section {
+        background-color: #202020;
+        width: 85%;
+        margin: 2rem auto;
+        border-radius: .5rem;
+        padding: .75rem 2.5rem 1rem;
+    }
+    .mainText {
+        &__title {
+            font-size: 4rem;
+            margin-bottom: .25rem;
+        }
+    }
+.header {
+    display: flex;
+    padding: 2rem 0 0;
+
+    &__nav {
+        display: flex;
+        width: 100%;
+        align-items: center;
+
+        &_profile {
+            height: 2.6rem;
+        }
+
+        &_navbar {
+            margin-top: .1rem;
+            margin-left: auto;
+        }
+    }
+
+    &__logo {
+        height: 2.3rem;
+    }
+
+    &__expand {
+        font-size: 1.4rem;
+    }
+    }
 }
 
 /* Extra big screen devices (1200px and above) */
 @media only screen and (min-width: 1200px) {
-    
+    main {
+        max-width: 1320px;
+    }
+    section {
+        width: 80%;
+    }
 }

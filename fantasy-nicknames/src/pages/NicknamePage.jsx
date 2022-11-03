@@ -41,11 +41,11 @@ export default function NicknamePage() {
 
   return (
     <>
-      <main>
+      <section>
         <Header />
         <Search />
         <PlayerSmall items={playerName} />
-      </main>
+      </section>
       <Nickname key={playerName} items={jsonParse} />
     </>
     
