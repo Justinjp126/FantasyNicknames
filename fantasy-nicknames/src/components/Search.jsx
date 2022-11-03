@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Options from "./Options";
 import { Form } from "react-router-dom"
 import { useDatabaseSnapshot } from "@react-query-firebase/database";
 import { db } from "../firebase"
 import { ref } from "firebase/database";
-
 export default function Search() {
   const dbRef = ref(db, "/" );
   const products = useDatabaseSnapshot(["/" ], dbRef);
