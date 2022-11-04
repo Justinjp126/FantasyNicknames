@@ -308,9 +308,9 @@ main {
     background-color: white;
     color: black;
 }
-button[data-pill-active="active"] {
-    background-color: white;
-    color: black;
+.pillActive {
+    background-color: white !important;
+    color: black !important;
     transition: .2 ease-in;
 }
 
