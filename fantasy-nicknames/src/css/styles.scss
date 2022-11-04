@@ -283,6 +283,37 @@ main {
     font-style: italic;
 }
 
+// * Pill Component * //
+.pillContainer {
+    overflow: auto;
+    white-space: nowrap;
+    padding-bottom: 1.5rem;
+}
+.pill {
+    font-weight: $regular;
+    display: inline-block;
+    letter-spacing: 1px;
+    background-color: #1a1a1a;
+    border: 2px solid white;
+    border-radius: 10rem;
+    padding: .3rem 1.25rem;
+    font-size: 1rem;
+    color: white;
+    margin-left: 1rem;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+.pill:hover,
+.pill:focus {
+    background-color: white;
+    color: black;
+}
+button[data-pill-active="active"] {
+    background-color: white;
+    color: black;
+    transition: .2 ease-in;
+}
+
 // * Player Component * //
 .popularPlayers {
     display: grid;
