@@ -1,7 +1,6 @@
 import React from "react";
 import fantasyNicknames from "../fantasy-nicknames.json";
 export default function Player(props) {
-  console.log(props);
   var playerName = props.items;
   var firstInitial = playerName.substring(0, 1);
   var lastName = playerName.substring(

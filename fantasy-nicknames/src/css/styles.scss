@@ -334,10 +334,10 @@ main {
   background-color: lighten(black, 20%);
   display: flex;
   padding: 1.25rem 1rem 1rem;
-  border-bottom: 1.5px solid black;
   transition: 0.2s ease;
   margin: 0.5rem 1rem;
   border-radius: 0.5rem;
+  border: 2px solid #383838;
   &__picture {
     display: flex;
     justify-content: center;
@@ -673,7 +673,7 @@ main {
       width: 55%;
       &_name {
         font-weight: $semi-bold;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
 
       &_type {
