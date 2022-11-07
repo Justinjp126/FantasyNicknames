@@ -1,9 +1,9 @@
 import React from "react";
 import Header from "../components/Header"
 import Search from "../components/Search";
-import PopularPlayers from "../components/PopularPlayers";
+import PlayerSection from "../components/PlayerSection";
 import PillMenu from "../components/PillMenu";
-export default function MainPage() {
+export default function MainPage({ type }) {
   
   return (
     <>
@@ -16,7 +16,7 @@ export default function MainPage() {
           </div>
           <Search />
           <PillMenu />
-          <PopularPlayers />
+          <PlayerSection type={type} />
       </section>
       </main>
 

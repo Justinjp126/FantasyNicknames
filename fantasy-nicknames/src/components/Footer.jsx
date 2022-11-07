@@ -5,10 +5,11 @@ export default function Footer() {
     <>
       <footer className="footer">
         <small className="footer__text">
-            <a className="footer__text_name" href="www.linkedIn">Made by JP</a>
+          <a className="footer__text_name" href="www.linkedIn">
+            Made by JP
+          </a>
         </small>
       </footer>
     </>
-    
   );
 }

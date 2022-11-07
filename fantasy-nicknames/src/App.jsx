@@ -16,6 +16,36 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />
   },
   {
+    path: "/popular",
+    element: <MainPage type="popular" />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/new",
+    element: <MainPage type="new" />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/qb",
+    element: <MainPage type="qb" />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/wr",
+    element: <MainPage type="wr" />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/te",
+    element: <MainPage type="te" />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/rb",
+    element: <MainPage type="rb" />,
+    errorElement: <ErrorPage />
+  },
+  {
     path: '/player/',
     element: <NicknamePage />,
     errorElement: <ErrorPage />,
