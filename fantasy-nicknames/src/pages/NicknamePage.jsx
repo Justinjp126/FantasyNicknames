@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import Nickname from "../components/Nickname"
-import Header from "../components/Header"
-import Search from "../components/Search"
-import PlayerSmall from "../components/PlayerSmall"
+import Nickname from "../components/Nickname";
+import Header from "../components/Header";
+import Search from "../components/Search";
+import PlayerSmall from "../components/PlayerSmall";
 import { useSearchParams } from "react-router-dom";
 import { useDatabaseSnapshot } from "@react-query-firebase/database";
-import { db } from "../firebase"
+import { db } from "../firebase";
 import { ref } from "firebase/database";
 import Fuse from "fuse.js";
-
+import PillMenu from "../components/PillMenu";
 export default function NicknamePage() {
   /*
   Take input using useSearchParams
@@ -20,7 +20,7 @@ export default function NicknamePage() {
   Send in parameter as object taken as the name 
   from Fuse.js
   */
-  const [searchParams] = useSearchParams()
+  const [searchParams] = useSearchParams();
   var input = searchParams.get("searchBar");
 
   const dbRef = ref(db, "/");
@@ -29,25 +29,37 @@ export default function NicknamePage() {
     return <div>Loading...</div>;
   }
   const playerObject = products.data;
-  const json = (JSON.stringify(playerObject))
+  const json = JSON.stringify(playerObject);
   const jsonParse = JSON.parse(json);
   const options = {
     shouldSort: true,
   };
-  const fuse = new Fuse(Object.keys(jsonParse), options)
+  const fuse = new Fuse(Object.keys(jsonParse), options);
   const result = fuse.search(input);
-  const playerName = result[0].item
-  const sortedPlayerObject = jsonParse[playerName]
+  const playerName = result[0].item;
+  const sortedPlayerObject = jsonParse[playerName];
 
   return (
     <>
-      <section>
+      <main>
         <Header />
-        <Search />
-        <PlayerSmall items={playerName} />
-      </section>
-      <Nickname key={playerName} items={sortedPlayerObject} />
+        <section>
+          <div className="nicknameSection">
+            <div className="playerLeft">
+              <Search />
+              <div className="pillMenu">
+                <PillMenu />
+              </div>
+              <div className="playerLeft__card">
+                <PlayerSmall items={playerName} />
+              </div>
+            </div>
+            <div className="playerRight">
+              <Nickname key={playerName} items={sortedPlayerObject} />
+            </div>
+          </div>
+        </section>
+      </main>
     </>
-    
   );
 }

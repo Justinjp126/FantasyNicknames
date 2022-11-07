@@ -1,9 +1,8 @@
 import React from "react";
-import Header from "../components/Header"
+import Header from "../components/Header";
 import { Outlet, Link } from "react-router-dom";
 
 export default function ErrorPage() {
-  
   return (
     <>
       <main>
@@ -16,8 +15,6 @@ export default function ErrorPage() {
           </Link>
         </div>
       </main>
-      
     </>
-    
   );
 }
