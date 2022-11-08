@@ -6,6 +6,7 @@
 */
 
 // * Variables * //
+
 $text-white: #fff;
 $thin: 100;
 $extra-light: 200;
@@ -16,6 +17,39 @@ $semi-bold: 600;
 $bold: 700;
 $extra-bold: 800;
 $black: 900;
+
+$ravens: #241774;
+$bengals: #fb4f14;
+$browns: #311d00;
+$steelers: #ffb612;
+$bills: #00338d;
+$dolphins: #008e97;
+$patriots: #002244;
+$jets: #125740;
+$texans: #03202f;
+$colts: #002c5f;
+$jaguars: #006778;
+$titans: #4b92db;
+$broncos: #fb4f14;
+$chiefs: #e31837;
+$raiders: #a5acaf;
+$chargers: #0080c6;
+$bears: #c83803;
+$lions: #0076b6;
+$packers: #203731;
+$vikings: #4f2683;
+$cowboys: #7f9695;
+$giants: #0b2265;
+$eagles: #004c54;
+$commanders: #5a1414;
+$falcons: #a71930;
+$panthers: #0085ca;
+$saints: #d3bc8d;
+$buccaneers: #ff7900;
+$cardinals: #97233f;
+$rams: #003594;
+$fourtyniners: #b3995d;
+$seahawks: #69be28;
 
 // * Global Styles * //
 :root {
@@ -48,9 +82,9 @@ li {
   display: list-item;
   list-style-position: inside;
 }
-// *** Styles *** //
 
 // * Pages *//
+
 // * Main Page * //
 main {
   margin: auto;
@@ -487,6 +521,7 @@ main {
   }
 }
 
+// * Media Queries * //
 @media only screen and (min-width: 600px) {
   .playerSmall {
     &__picture {
