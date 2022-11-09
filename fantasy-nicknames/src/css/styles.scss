@@ -348,6 +348,7 @@ main {
 // * Player Component * //
 .popularPlayers {
   display: grid;
+  gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   opacity: 0;
   animation: fade 500ms ease-out forwards;
@@ -364,14 +365,35 @@ main {
     opacity: 1;
   }
 }
+.player-wrapper {
+  position: relative;
+  background-clip: padding-box;
+  border: solid transparent 2px;
+  border-radius: 0.7rem;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(
+      90deg,
+      rgb(68, 68, 68) 0%,
+      rgba(51, 51, 51, 1) 10%
+    );
+  }
+}
 .player {
   background-color: lighten(black, 20%);
   display: flex;
   padding: 1.25rem 1rem 1rem;
   transition: 0.2s ease;
-  margin: 0.5rem 1rem;
+  margin: 0.15rem;
   border-radius: 0.5rem;
-  border: 2px solid #383838;
+  //border: 2px solid #383838;
   &__picture {
     display: flex;
     justify-content: center;

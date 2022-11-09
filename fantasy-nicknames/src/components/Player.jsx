@@ -10,24 +10,26 @@ export default function Player(props) {
     var playerURL = (firstInitial + "_" + lastName).toLowerCase();
     return (
       <>
-        <div className="player">
-          <div className="player__picture">
-            <img
-              className="player__picture_img"
-              src={"src/images/" + playerURL + ".png"}
-              id={props.items.name + " img"}
-            />
-          </div>
-          <div className="player__info">
-            <h2 className="player__info_name" id={props.items.name}>
-              {props.items.name}
-            </h2>
-            <h4 className="player__info_type" id={props.items.type}>
-              {props.items.type}
-            </h4>
-            <h3 className="player__info_number" id={props.items.number}>
-              {"#" + props.items.number}
-            </h3>
+        <div className="player-wrapper">
+          <div className="player">
+            <div className="player__picture">
+              <img
+                className="player__picture_img"
+                src={"src/images/" + playerURL + ".png"}
+                id={props.items.name + " img"}
+              />
+            </div>
+            <div className="player__info">
+              <h2 className="player__info_name" id={props.items.name}>
+                {props.items.name}
+              </h2>
+              <h4 className="player__info_type" id={props.items.type}>
+                {props.items.type}
+              </h4>
+              <h3 className="player__info_number" id={props.items.number}>
+                {"#" + props.items.number}
+              </h3>
+            </div>
           </div>
         </div>
       </>
