@@ -8,7 +8,7 @@ export default function MainPage() {
     <>
       <main>
         <Header />
-        <section>
+        <section className="main-wrapper">
           <div className="mainText">
             <h1 className="mainText__title">Fantasy Nicknames</h1>
             <p className="mainText__text">

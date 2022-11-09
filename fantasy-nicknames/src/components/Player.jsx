@@ -17,6 +17,7 @@ export default function Player(props) {
                 className="player__picture_img"
                 src={"src/images/" + playerURL + ".png"}
                 id={props.items.name + " img"}
+                alt={`${props.items.name} Image`}
               />
             </div>
             <div className="player__info">

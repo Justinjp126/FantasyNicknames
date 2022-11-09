@@ -42,6 +42,7 @@ export default function Player(props) {
             className="playerSmall__picture_img"
             src={"src/images/" + playerURL + ".png"}
             id={nameObj.name + " img"}
+            alt={nameObj.name + " Image"}
           />
         </div>
         <div className="playerSmall__info">

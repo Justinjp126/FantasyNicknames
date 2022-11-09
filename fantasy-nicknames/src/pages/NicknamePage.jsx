@@ -43,7 +43,7 @@ export default function NicknamePage() {
     <>
       <main>
         <Header />
-        <section>
+        <section className="nickname-wrapper">
           <div className="nicknameSection">
             <div className="playerLeft">
               <Search />
