@@ -1,6 +1,9 @@
 from ctypes import addressof
 from tkinter.font import names
 from bs4 import BeautifulSoup
+import time
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 import requests
 import json
 import re
@@ -133,8 +136,28 @@ ranker
 
 def addRankerPlayer(source, playerName):
     global counter
-    source = source.text
-    soup = BeautifulSoup(source, 'lxml')
+    
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver.get(source)
+    
+    time.sleep(2)  # Allow 2 seconds for the web page to open
+    scroll_pause_time = 1 # You can set your own pause time. My laptop is a bit slow so I use 1 sec
+    screen_height = driver.execute_script("return window.screen.height;")   # get the screen height of the web
+    i = 1
+
+    while True:
+        # scroll one screen height each time
+        driver.execute_script("window.scrollTo(0, {screen_height}*{i});".format(screen_height=screen_height, i=i))  
+        i += 1
+        time.sleep(scroll_pause_time)
+        # update scroll height each time after scrolled, as the scroll height can change after we scrolled the page
+        scroll_height = driver.execute_script("return document.body.scrollHeight;")  
+        # Break the loop when the height we need to scroll to is larger than the total scroll height
+        if (screen_height) * i > scroll_height:
+            break 
+    
+    soup = BeautifulSoup(driver.page_source, "lxml")
+
     namesDic["names"].update({playerName : {}})
     namesDic["names"][playerName]['name'] = playerName
     namesDic["names"][playerName]['nicknames'] = []
@@ -160,7 +183,6 @@ Sportkeeda
 
 def addSportkeedaPlayer(source, playerName):
     global counter
-    row = 0
     source = source.text
     soup = BeautifulSoup(source, 'lxml')
     namesDic["names"].update({playerName : {}})
@@ -319,24 +341,24 @@ def addOtherPlayers():
 def addPlayersToDictionary():
     addSportkeedaPlayer(j_taylor_source, "Johnathan Taylor")
     addSportkeedaPlayer(n_harris_source, "Najee Harris")
-    addRankerPlayer(c_kupp_source, "Cooper Kupp")
-    addRankerPlayer(d_henry_source, "Derrick Henry")
+    addRankerPlayer('https://www.ranker.com/list/best-cooper-kupp-fantasy-name/pedro-cerrano', "Cooper Kupp")
+    addRankerPlayer('https://www.ranker.com/list/best-derrick-henry-fantasy-name/pedro-cerrano', "Derrick Henry")
     addSportkeedaPlayer(c_mccaffrey_source, "Christian McCaffrey")
     addSportkeedaPlayer(a_kamara_source, "Alvin Kamara")
-    addRankerPlayer(j_chase_source, "Ja'Marr Chase")
+    addRankerPlayer('https://www.ranker.com/list/best-jamarr-chase-fantasy-name/pedro-cerrano', "Ja'Marr Chase")
     addCheatSheetPlayer(c_lamb_source, "CeeDee Lamb")
-    addRankerPlayer(s_diggs_source, "Stefon Diggs")
+    addRankerPlayer('https://www.ranker.com/list/best-stefon-diggs-fantasy-name/pedro-cerrano', "Stefon Diggs")
     addSportkeedaPlayer(d_adams_source, "Davante Adams")
-    addRankerPlayer(d_swift_source, "D'Andre Swift")
+    addRankerPlayer('https://www.ranker.com/list/best-dandre-swift-fantasy-name/pedro-cerrano', "D'Andre Swift")
     addCheatSheetPlayer(t_kelce_source, "Travis Kelce")
     addSportkeedaPlayer(m_andrews_source, "Mark Andrews")
-    addRankerPlayer(j_mixon_source, "Joe Mixon")
+    addRankerPlayer('https://www.ranker.com/list/best-joe-mixon-fantasy-name/pedro-cerrano', "Joe Mixon")
     addFanDualPlayer(m_evans_source, "Mike Evans")
     addSportkeedaPlayer(t_hill_source, "Tyreek Hill")
     addSportkeedaPlayer(d_samuel_source, "Deebo Samuel")
     addFanDualPlayer(k_allen_source, "Keenan Allen")
     addFlurrySportsPlayer(l_fournette_source, "Leonard Fournette")
-    addRankerPlayer(t_mclaurin_source, "Terry McLaurin")
+    addRankerPlayer('https://www.ranker.com/list/best-terry-mclaurin-fantasy-name/pedro-cerrano', "Terry McLaurin")
     addFlurrySportsPlayer(d_johnson_source, "Diontae Johnson")
     addFanDualPlayer(a_jones_source, "Aaron Jones")
     addFlurrySportsPlayer(e_elliott_source, "Ezekiel Elliott")
@@ -344,7 +366,7 @@ def addPlayersToDictionary():
     addFlurrySportsPlayer(a_brown_source, "AJ Brown")
     addFanDualPlayer(c_akers_source, "Cam Akers")
     addFanDualPlayer(j_conner_source, "James Conner")
-    addRankerPlayer(s_barkley_source, "Saquon Barkley")
+    addRankerPlayer('https://www.ranker.com/list/best-saquon-barkley-fantasy-name/pedro-cerrano', "Saquon Barkley")
     addCheatSheetPlayer(j_allen_source, "Josh Allen")
     addSportkeedaPlayer(n_chubb_source, "Nick Chubb")
     addSportkeedaPlayer(d_metcalf_source, "DK Metcalf")
@@ -352,19 +374,19 @@ def addPlayersToDictionary():
     addCheatSheetPlayer(j_jacobs_source, "Josh Jacobs")
     addFanDualPlayer(c_helaire_source, "Clyde Edwards-Helaire")
     addFanDualPlayer(d_waller_source, "Darren Waller")
-    addRankerPlayer(g_kittle_source, "George Kittle")
+    addRankerPlayer('https://www.ranker.com/list/best-george-kittle-fantasy-name/pedro-cerrano', "George Kittle")
     addFanDualPlayer(c_patterson_source, "Cordarrelle Patterson")
     addSportkeedaPlayer(t_higgins_source, "Tee Higgins")
     addFlurrySportsPlayer(e_mitchell_source, "Elijah Mitchell")
     addCheatSheetPlayer(j_herbert_source, "Justin Herbert")
-    addRankerPlayer(p_mahomes_source, "Patrick Mahomes")
+    addRankerPlayer('https://www.ranker.com/list/best-patrick-mahomes-fantasy-name/pedro-cerrano', "Patrick Mahomes")
     addFlurrySportsPlayer(j_waddle_source, "Jaylen Waddle")
     addSportkeedaPlayer(l_jackson_source, "Lamar Jackson")
-    addRankerPlayer(j_hurts_source, "Jalen Hurts")
+    addRankerPlayer('https://www.ranker.com/list/best-jalen-hurts-fantasy-name/pedro-cerrano', "Jalen Hurts")
     addFlurrySportsPlayer(k_murray_source, "Kyler Murray")
     addFlurrySportsPlayer(j_goff_source, "Jared Goff")
-    addRankerPlayer(j_burrow_source, "Joe Burrow")
-    addRankerPlayer(t_tagovailoa_source, "Tua Tagovailoa")
+    addRankerPlayer('https://www.ranker.com/list/best-joe-burrow-fantasty-name/pedro-cerrano', "Joe Burrow")
+    addRankerPlayer('https://www.ranker.com/list/best-tua-tagovailoa-fantasy-name/pedro-cerrano', "Tua Tagovailoa")
     addSportkeedaPlayer(t_brady_source, "Tom Brady")
     addCheatSheetPlayer(am_brown_source, "Amon-Ra St. Brown")
     addFlurrySportsPlayer(k_hunt_source, "Kareem Hunt")
@@ -378,7 +400,6 @@ def createJSONFile():
     namesJSON = json.dumps(namesDic, indent=4)
     with open("fantasy-nicknames-new.json", "w") as outfile:
         json.dump(namesJSON, outfile)
-
     print(namesJSON)
 
 def main():
