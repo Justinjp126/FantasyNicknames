@@ -1,7 +1,7 @@
 {
     "names": {
-        "Johnathan Taylor": {
-            "name": "Johnathan Taylor",
+        "Jonathan Taylor": {
+            "name": "Jonathan Taylor",
             "nicknames": [
                 [
                     "John Colt-Train",
@@ -125,9 +125,9 @@
                 ]
             ],
             "key": 1,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Indianapolis, Colts",
+            "number": 28,
+            "type": "RB"
         },
         "Najee Harris": {
             "name": "Najee Harris",
@@ -294,9 +294,9 @@
                 ]
             ],
             "key": 2,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Pittsburgh, Steelers",
+            "number": 22,
+            "type": "RB"
         },
         "Cooper Kupp": {
             "name": "Cooper Kupp",
@@ -523,9 +523,9 @@
                 ]
             ],
             "key": 3,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Los Angeles, Rams",
+            "number": 10,
+            "type": "WR"
         },
         "Derrick Henry": {
             "name": "Derrick Henry",
@@ -732,9 +732,9 @@
                 ]
             ],
             "key": 4,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Tennessee, Titans",
+            "number": 22,
+            "type": "RB"
         },
         "Christian McCaffrey": {
             "name": "Christian McCaffrey",
@@ -901,9 +901,9 @@
                 ]
             ],
             "key": 5,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "San Francisco, 49ers",
+            "number": 23,
+            "type": "RB"
         },
         "Alvin Kamara": {
             "name": "Alvin Kamara",
@@ -1070,9 +1070,9 @@
                 ]
             ],
             "key": 6,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "New Orleans, Saints",
+            "number": 41,
+            "type": "RB"
         },
         "Ja'Marr Chase": {
             "name": "Ja'Marr Chase",
@@ -1327,9 +1327,9 @@
                 ]
             ],
             "key": 7,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Cincinnati, Bengals",
+            "number": 1,
+            "type": "WR"
         },
         "CeeDee Lamb": {
             "name": "CeeDee Lamb",
@@ -1472,9 +1472,9 @@
                 ]
             ],
             "key": 8,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Dallas, Cowboys",
+            "number": 88,
+            "type": "WR"
         },
         "Stefon Diggs": {
             "name": "Stefon Diggs",
@@ -1609,9 +1609,9 @@
                 ]
             ],
             "key": 9,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Buffalo, Bills",
+            "number": 14,
+            "type": "WR"
         },
         "Davante Adams": {
             "name": "Davante Adams",
@@ -1738,9 +1738,9 @@
                 ]
             ],
             "key": 10,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Las Vegas, Raiders",
+            "number": 17,
+            "type": "WR"
         },
         "D'Andre Swift": {
             "name": "D'Andre Swift",
@@ -1875,9 +1875,9 @@
                 ]
             ],
             "key": 11,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Detriot, Lions",
+            "number": 32,
+            "type": "RB"
         },
         "Travis Kelce": {
             "name": "Travis Kelce",
@@ -2012,9 +2012,9 @@
                 ]
             ],
             "key": 12,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Kansas City, Chiefs",
+            "number": 87,
+            "type": "TE"
         },
         "Mark Andrews": {
             "name": "Mark Andrews",
@@ -2181,9 +2181,9 @@
                 ]
             ],
             "key": 13,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Baltimore, Ravens",
+            "number": 89,
+            "type": "TE"
         },
         "Joe Mixon": {
             "name": "Joe Mixon",
@@ -2362,9 +2362,9 @@
                 ]
             ],
             "key": 14,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Cincinnati, Bengals",
+            "number": 28,
+            "type": "RB"
         },
         "Mike Evans": {
             "name": "Mike Evans",
@@ -2403,9 +2403,9 @@
                 ]
             ],
             "key": 15,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Tampa Bay, Buccaneers",
+            "number": 13,
+            "type": "WR"
         },
         "Tyreek Hill": {
             "name": "Tyreek Hill",
@@ -2572,9 +2572,9 @@
                 ]
             ],
             "key": 16,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Miami, Dolphins",
+            "number": 10,
+            "type": "WR"
         },
         "Deebo Samuel": {
             "name": "Deebo Samuel",
@@ -2741,9 +2741,9 @@
                 ]
             ],
             "key": 17,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "San Francisco, 49ers",
+            "number": 19,
+            "type": "WR"
         },
         "Keenan Allen": {
             "name": "Keenan Allen",
@@ -2786,9 +2786,9 @@
                 ]
             ],
             "key": 18,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Los Angeles, Chargers",
+            "number": 13,
+            "type": "WR"
         },
         "Leonard Fournette": {
             "name": "Leonard Fournette",
@@ -2827,9 +2827,9 @@
                 ]
             ],
             "key": 19,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Tampa Bay, Buccaneers",
+            "number": 7,
+            "type": "RB"
         },
         "Terry McLaurin": {
             "name": "Terry McLaurin",
@@ -2964,9 +2964,9 @@
                 ]
             ],
             "key": 20,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Washington, Commanders",
+            "number": 17,
+            "type": "WR"
         },
         "Diontae Johnson": {
             "name": "Diontae Johnson",
@@ -3014,12 +3014,16 @@
                 [
                     "DJ YAC",
                     0
+                ],
+                [
+                    "Diontae Dropson",
+                    0
                 ]
             ],
             "key": 21,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Pittsburgh, Steelers",
+            "number": 18,
+            "type": "WR"
         },
         "Aaron Jones": {
             "name": "Aaron Jones",
@@ -3050,9 +3054,9 @@
                 ]
             ],
             "key": 22,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Green Bay, Packers",
+            "number": 33,
+            "type": "RB"
         },
         "Ezekiel Elliott": {
             "name": "Ezekiel Elliott",
@@ -3103,9 +3107,9 @@
                 ]
             ],
             "key": 23,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Dallas, Cowboys",
+            "number": 21,
+            "type": "RB"
         },
         "Kyle Pitts": {
             "name": "Kyle Pitts",
@@ -3144,9 +3148,9 @@
                 ]
             ],
             "key": 24,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Atlanta, Falcons",
+            "number": 8,
+            "type": "TE"
         },
         "AJ Brown": {
             "name": "AJ Brown",
@@ -3185,9 +3189,9 @@
                 ]
             ],
             "key": 25,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Philadelphia, Eagles",
+            "number": 11,
+            "type": "WR"
         },
         "Cam Akers": {
             "name": "Cam Akers",
@@ -3226,9 +3230,9 @@
                 ]
             ],
             "key": 26,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Los Angeles, Rams",
+            "number": 3,
+            "type": "RB"
         },
         "James Conner": {
             "name": "James Conner",
@@ -3267,9 +3271,9 @@
                 ]
             ],
             "key": 27,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Arizona, Cardinals",
+            "number": 6,
+            "type": "RB"
         },
         "Saquon Barkley": {
             "name": "Saquon Barkley",
@@ -3420,9 +3424,9 @@
                 ]
             ],
             "key": 28,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "New York, Giants",
+            "number": 26,
+            "type": "RB"
         },
         "Josh Allen": {
             "name": "Josh Allen",
@@ -3601,9 +3605,9 @@
                 ]
             ],
             "key": 29,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Buffalo, Bills",
+            "number": 17,
+            "type": "QB"
         },
         "Nick Chubb": {
             "name": "Nick Chubb",
@@ -3770,9 +3774,9 @@
                 ]
             ],
             "key": 30,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Cleveland, Browns",
+            "number": 24,
+            "type": "RB"
         },
         "DK Metcalf": {
             "name": "DK Metcalf",
@@ -3884,64 +3888,12 @@
                 [
                     "Radioactive DK",
                     0
-                ],
-                [
-                    "Heart-shaped Lockett",
-                    0
-                ],
-                [
-                    "Hot Lockett",
-                    0
-                ],
-                [
-                    "The Adams Family",
-                    0
-                ],
-                [
-                    "Jamal About That Bass",
-                    0
-                ],
-                [
-                    "You Fant Touch This",
-                    0
-                ],
-                [
-                    "Penny For Your Thoughts (for RB Rashaad Penny)",
-                    0
-                ],
-                [
-                    "The Penny is Mightier",
-                    0
-                ],
-                [
-                    "Runnin' Rashaad Over You",
-                    0
-                ],
-                [
-                    "A Christmas Carroll",
-                    0
-                ],
-                [
-                    "Baldwin on a Budget",
-                    0
-                ],
-                [
-                    "I'm Bringing Hassel Back",
-                    0
-                ],
-                [
-                    "Hawk Blockers",
-                    0
-                ],
-                [
-                    "12th Men",
-                    0
                 ]
             ],
             "key": 31,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Seattle, Seahawks",
+            "number": 14,
+            "type": "WR"
         },
         "DJ Moore": {
             "name": "DJ Moore",
@@ -3980,9 +3932,9 @@
                 ]
             ],
             "key": 32,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Carolina, Panthers",
+            "number": 2,
+            "type": "WR"
         },
         "Josh Jacobs": {
             "name": "Josh Jacobs",
@@ -4101,9 +4053,9 @@
                 ]
             ],
             "key": 33,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Las Vegas, Raiders",
+            "number": 28,
+            "type": "RB"
         },
         "Clyde Edwards-Helaire": {
             "name": "Clyde Edwards-Helaire",
@@ -4146,9 +4098,9 @@
                 ]
             ],
             "key": 34,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Kansas City, Chiefs",
+            "number": 25,
+            "type": "RB"
         },
         "Darren Waller": {
             "name": "Darren Waller",
@@ -4179,9 +4131,9 @@
                 ]
             ],
             "key": 35,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Las Vegas, Raiders",
+            "number": 83,
+            "type": "TE"
         },
         "George Kittle": {
             "name": "George Kittle",
@@ -4352,9 +4304,9 @@
                 ]
             ],
             "key": 36,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "San Francisco, 49ers",
+            "number": 85,
+            "type": "TE"
         },
         "Cordarrelle Patterson": {
             "name": "Cordarrelle Patterson",
@@ -4393,9 +4345,9 @@
                 ]
             ],
             "key": 37,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Atlanta, Falcons",
+            "number": 84,
+            "type": "RB"
         },
         "Tee Higgins": {
             "name": "Tee Higgins",
@@ -4481,90 +4433,18 @@
                     0
                 ],
                 [
-                    "WhoDey and the Blowfish",
-                    0
-                ],
-                [
-                    "Bengal Burrow",
-                    0
-                ],
-                [
-                    "Joe Burrow, Tiger King",
-                    0
-                ],
-                [
-                    "Marr Burrow Smokes",
-                    0
-                ],
-                [
-                    "Sir Mixon-A-Lot",
-                    0
-                ],
-                [
-                    "The Mixon Administration",
-                    0
-                ],
-                [
-                    "Mixon Match",
-                    0
-                ],
-                [
-                    "Boyd to be Wild",
-                    0
-                ],
-                [
-                    "Boyd Howdy",
-                    0
-                ],
-                [
-                    "This Boyds Life",
-                    0
-                ],
-                [
                     "Fits to a Tee",
                     0
                 ],
                 [
                     "Tee it Up",
                     0
-                ],
-                [
-                    "Chidobe Acrobats",
-                    0
-                ],
-                [
-                    "Feeling Awuzie",
-                    0
-                ],
-                [
-                    "Jessie Bates Motel",
-                    0
-                ],
-                [
-                    "Ja'Marr of the Beast",
-                    0
-                ],
-                [
-                    "Mar Chase",
-                    0
-                ],
-                [
-                    "Ja'Marr Chase Bank",
-                    0
-                ],
-                [
-                    "Chase Your Ja'reams",
-                    0
-                ],
-                [
-                    "Burrowing Down",
-                    0
                 ]
             ],
             "key": 38,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Cincinnati, Bengals",
+            "number": 85,
+            "type": "WR"
         },
         "Elijah Mitchell": {
             "name": "Elijah Mitchell",
@@ -4587,9 +4467,9 @@
                 ]
             ],
             "key": 39,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "San Francisco, 49ers",
+            "number": 25,
+            "type": "RB"
         },
         "Justin Herbert": {
             "name": "Justin Herbert",
@@ -4744,9 +4624,9 @@
                 ]
             ],
             "key": 40,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Los Angeles, Chargers",
+            "number": 10,
+            "type": "QB"
         },
         "Patrick Mahomes": {
             "name": "Patrick Mahomes",
@@ -4921,9 +4801,9 @@
                 ]
             ],
             "key": 41,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Kansas City, Chiefs",
+            "number": 15,
+            "type": "QB"
         },
         "Jaylen Waddle": {
             "name": "Jaylen Waddle",
@@ -4954,9 +4834,9 @@
                 ]
             ],
             "key": 42,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Miami, Dolphins",
+            "number": 17,
+            "type": "WR"
         },
         "Lamar Jackson": {
             "name": "Lamar Jackson",
@@ -5123,9 +5003,9 @@
                 ]
             ],
             "key": 43,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Baltimore, Ravens",
+            "number": 8,
+            "type": "QB"
         },
         "Jalen Hurts": {
             "name": "Jalen Hurts",
@@ -5256,9 +5136,9 @@
                 ]
             ],
             "key": 44,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Philadelphia, Eagles",
+            "number": 1,
+            "type": "QB"
         },
         "Kyler Murray": {
             "name": "Kyler Murray",
@@ -5349,9 +5229,9 @@
                 ]
             ],
             "key": 45,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Arizona, Cardinals",
+            "number": 1,
+            "type": "QB"
         },
         "Jared Goff": {
             "name": "Jared Goff",
@@ -5394,9 +5274,9 @@
                 ]
             ],
             "key": 46,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Detriot, Lions",
+            "number": 16,
+            "type": "QB"
         },
         "Joe Burrow": {
             "name": "Joe Burrow",
@@ -5503,9 +5383,9 @@
                 ]
             ],
             "key": 47,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Cincinnati, Bengals",
+            "number": 9,
+            "type": "QB"
         },
         "Tua Tagovailoa": {
             "name": "Tua Tagovailoa",
@@ -5752,9 +5632,9 @@
                 ]
             ],
             "key": 48,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Miami, Dolphins",
+            "number": 1,
+            "type": "QB"
         },
         "Tom Brady": {
             "name": "Tom Brady",
@@ -5921,11 +5801,11 @@
                 ]
             ],
             "key": 49,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Tampa Bay, Buccaneers",
+            "number": 12,
+            "type": "QB"
         },
-        "Amon-Ra St. Brown": {
+        "Amon-Ra St Brown": {
             "name": "Amon-Ra St. Brown",
             "nicknames": [
                 [
@@ -6038,9 +5918,9 @@
                 ]
             ],
             "key": 50,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Detriot, Lions",
+            "number": 14,
+            "type": "WR"
         },
         "Kareem Hunt": {
             "name": "Kareem Hunt",
@@ -6107,9 +5987,9 @@
                 ]
             ],
             "key": 51,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Cleveland, Browns",
+            "number": 27,
+            "type": "RB"
         },
         "James Robinson": {
             "name": "James Robinson",
@@ -6132,9 +6012,9 @@
                 ]
             ],
             "key": 52,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "New York, Jets",
+            "number": 23,
+            "type": "RB"
         },
         "TJ Hockenson": {
             "name": "TJ Hockenson",
@@ -6193,9 +6073,9 @@
                 ]
             ],
             "key": 53,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Minnesota, Vikings",
+            "number": 87,
+            "type": "TE"
         },
         "George Pickens": {
             "name": "George Pickens",
@@ -6214,9 +6094,9 @@
                 ]
             ],
             "key": 54,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Pittsburgh, Steelers",
+            "number": 14,
+            "type": "WR"
         },
         "Austin Ekeler": {
             "name": "Austin Ekeler",
@@ -6327,9 +6207,9 @@
                 ]
             ],
             "key": 55,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Los Angeles, Chargers",
+            "number": 30,
+            "type": "RB"
         },
         "Dalvin Cook": {
             "name": "Dalvin Cook",
@@ -6428,9 +6308,9 @@
                 ]
             ],
             "key": 56,
-            "team": "",
-            "number": 0,
-            "type": ""
+            "team": "Minnesota, Vikings",
+            "number": 4,
+            "type": "RB"
         }
     }
 }
