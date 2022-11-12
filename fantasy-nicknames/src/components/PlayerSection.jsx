@@ -11,10 +11,12 @@ export default function PlayerSection() {
   const [names, setNames] = useState([]);
 
   useEffect(() => {
-    onValue(ref(db), (snapshot) => {
+    onValue(ref(db, "names"), (snapshot) => {
       const data = snapshot.val();
+      console.log(data);
       if (data !== null) {
         Object.values(data).map((names) => {
+          console.log(names);
           setNames((oldArray) => [...oldArray, names]);
         });
       }

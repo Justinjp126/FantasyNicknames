@@ -1,7 +1,12 @@
 import React from "react";
 
 export default function Nickname(props) {
-  const nicknamesArray = Object.values(props.items.nicknames);
+  const nicknamesObj = Object.values(props.items.nicknames);
+  var nicknamesArray = [];
+  for (var i = 0; i < nicknamesObj.length; i++) {
+    nicknamesArray.push(nicknamesObj[i][0]);
+  }
+  // const nicknamesArrayNew = nicknamesArray
 
   return (
     <>

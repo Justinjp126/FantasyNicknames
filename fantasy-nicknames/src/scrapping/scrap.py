@@ -122,7 +122,7 @@ t_hockenson_source = requests.get(
     'https://flurrysports.org/t-j-hockenson-fantasy-football-team-names/')
 g_pickens_source = requests.get(
     'https://flurrysports.org/george-pickens-fantasy-football-team-names/')
-namesDic = {}  # dictionary with name as key, array of nicknames as value
+namesDic = {"names": {}}  # dictionary with name as key, array of nicknames as value
 counter = 1
 '''
 Function to add values to
@@ -135,16 +135,19 @@ def addRankerPlayer(source, playerName):
     global counter
     source = source.text
     soup = BeautifulSoup(source, 'lxml')
-    namesDic.update({playerName: {}})
-    namesDic[playerName]['name'] = playerName
-    namesDic[playerName]['nicknames'] = []
-    namesDic[playerName]['key'] = counter
+    namesDic["names"].update({playerName : {}})
+    namesDic["names"][playerName]['name'] = playerName
+    namesDic["names"][playerName]['nicknames'] = []
+    namesDic["names"][playerName]['key'] = counter
+    namesDic["names"][playerName]['team'] = ""
+    namesDic["names"][playerName]['number'] = 00
+    namesDic["names"][playerName]['type'] = ""
     nicknameTags = soup.find_all("h2", class_="listItem_name__Qq_Y8")
     for nicknames in nicknameTags:
         nickname = nicknames.text
         nickname = re.sub(r'[^\x00-\x7F]+', "'", nickname)
         if (nickname != ""):
-            namesDic[playerName]['nicknames'].append(nickname)
+            namesDic["names"][playerName]['nicknames'].append([nickname, 0])
     counter = counter + 1
 
 
@@ -157,12 +160,16 @@ Sportkeeda
 
 def addSportkeedaPlayer(source, playerName):
     global counter
+    row = 0
     source = source.text
     soup = BeautifulSoup(source, 'lxml')
-    namesDic.update({playerName: {}})
-    namesDic[playerName]['name'] = playerName
-    namesDic[playerName]['nicknames'] = []
-    namesDic[playerName]['key'] = counter
+    namesDic["names"].update({playerName : {}})
+    namesDic["names"][playerName]['name'] = playerName
+    namesDic["names"][playerName]['nicknames'] = []
+    namesDic["names"][playerName]['key'] = counter
+    namesDic["names"][playerName]['team'] = ""
+    namesDic["names"][playerName]['number'] = 00
+    namesDic["names"][playerName]['type'] = ""
     nicknameTags = soup.find_all('li', class_=None, id=None)
     for nicknames in nicknameTags:
         nickname = nicknames.text
@@ -170,7 +177,7 @@ def addSportkeedaPlayer(source, playerName):
             nickname = nickname.strip(nickname[-1])
         nickname = re.sub(r'[^\x00-\x7F]+', "'", nickname)
         if (nickname != ""):
-            namesDic[playerName]['nicknames'].append(nickname)
+            namesDic["names"][playerName]['nicknames'].append([nickname, 0])
     counter = counter + 1
 
 
@@ -185,16 +192,19 @@ def addCheatSheetPlayer(source, playerName):
     global counter
     source = source.text
     soup = BeautifulSoup(source, 'lxml')
-    namesDic.update({playerName: {}})
-    namesDic[playerName]['name'] = playerName
-    namesDic[playerName]['nicknames'] = []
-    namesDic[playerName]['key'] = counter
+    namesDic["names"].update({playerName : {}})
+    namesDic["names"][playerName]['name'] = playerName
+    namesDic["names"][playerName]['nicknames'] = []
+    namesDic["names"][playerName]['key'] = counter
+    namesDic["names"][playerName]['team'] = ""
+    namesDic["names"][playerName]['number'] = 00
+    namesDic["names"][playerName]['type'] = ""
     nicknameTags = soup.find_all("span", class_="auton")
     for nicknames in nicknameTags:
         nickname = nicknames.text
         nickname = re.sub(r'[^\x00-\x7F]+', "'", nickname)
         if (nickname != ""):
-            namesDic[playerName]['nicknames'].append(nickname)
+            namesDic["names"][playerName]['nicknames'].append([nickname, 0])
     counter = counter + 1
 
 
@@ -208,10 +218,13 @@ def addFanDualPlayer(source, playerName):
     global counter
     source = source.text
     soup = BeautifulSoup(source, 'lxml')
-    namesDic.update({playerName: {}})
-    namesDic[playerName]['name'] = playerName
-    namesDic[playerName]['nicknames'] = []
-    namesDic[playerName]['key'] = counter
+    namesDic["names"].update({playerName : {}})
+    namesDic["names"][playerName]['name'] = playerName
+    namesDic["names"][playerName]['nicknames'] = []
+    namesDic["names"][playerName]['key'] = counter
+    namesDic["names"][playerName]['team'] = ""
+    namesDic["names"][playerName]['number'] = 00
+    namesDic["names"][playerName]['type'] = ""
     nicknameTags = soup.find_all("h2", {"data-mm-id": True})
     for index, nicknames in enumerate(nicknameTags):
         if (index > 1):  # skip first two results
@@ -221,7 +234,7 @@ def addFanDualPlayer(source, playerName):
             nickname = nickname.strip()
             nickname = re.sub(r'[^\x00-\x7F]+', "'", nickname)
             if (nickname != ""):
-                namesDic[playerName]['nicknames'].append(nickname)
+                namesDic["names"][playerName]['nicknames'].append([nickname, 0])
     counter = counter + 1
 
 
@@ -235,10 +248,13 @@ def addFlurrySportsPlayer(source, playerName):
     global counter
     source = source.text
     soup = BeautifulSoup(source, 'lxml')
-    namesDic.update({playerName: {}})
-    namesDic[playerName]['name'] = playerName
-    namesDic[playerName]['nicknames'] = []
-    namesDic[playerName]['key'] = counter
+    namesDic["names"].update({playerName : {}})
+    namesDic["names"][playerName]['name'] = playerName
+    namesDic["names"][playerName]['nicknames'] = []
+    namesDic["names"][playerName]['key'] = counter
+    namesDic["names"][playerName]['team'] = ""
+    namesDic["names"][playerName]['number'] = 00
+    namesDic["names"][playerName]['type'] = ""
     playerHeading = soup.find("ul", class_=None)
     nicknames = playerHeading.find_all("li")
     for nickname in nicknames:
@@ -246,7 +262,7 @@ def addFlurrySportsPlayer(source, playerName):
         nickname = nickname.strip('\n')
         nickname = nickname.replace('\n', '')
         if (nickname != ""):
-            namesDic[playerName]['nicknames'].append(nickname)
+            namesDic["names"][playerName]['nicknames'].append([nickname, 0])
     counter = counter + 1
 
 
@@ -260,25 +276,31 @@ def addOtherPlayers():
     global counter
     # AE
     soup = BeautifulSoup(a_ekeler_source, 'lxml')
-    namesDic.update({'Austin Ekeler': {}})
-    namesDic['Austin Ekeler']['name'] = 'Austin Ekeler'
-    namesDic['Austin Ekeler']['nicknames'] = []
-    namesDic['Austin Ekeler']['key'] = counter
+    namesDic["names"].update({'Austin Ekeler': {}})
+    namesDic["names"]['Austin Ekeler']['name'] = 'Austin Ekeler'
+    namesDic["names"]['Austin Ekeler']['nicknames'] = []
+    namesDic["names"]['Austin Ekeler']['key'] = counter
+    namesDic["names"]['Austin Ekeler']['team'] = ""
+    namesDic["names"]['Austin Ekeler']['number'] = 00
+    namesDic["names"]['Austin Ekeler']['type'] = ""
     nicknameTags = soup.find_all('li', class_=None, id=None)
     for index, nicknames in enumerate(nicknameTags):
         if (index < 26):
             nickname = nicknames.text
             nickname = re.sub(r'[^\x00-\x7F]+', "'", nickname)
             if (nickname != ""):
-                namesDic['Austin Ekeler']['nicknames'].append(nickname)
+                namesDic["names"]['Austin Ekeler']['nicknames'].append([nickname, 0])
     counter = counter + 1
 
     # DC
     soup = BeautifulSoup(d_cook_source, 'lxml')
-    namesDic.update({'Dalvin Cook': {}})
-    namesDic['Dalvin Cook']['name'] = 'Dalvin Cook'
-    namesDic['Dalvin Cook']['nicknames'] = []
-    namesDic['Dalvin Cook']['key'] = counter
+    namesDic["names"].update({'Dalvin Cook': {}})
+    namesDic["names"]['Dalvin Cook']['name'] = 'Dalvin Cook'
+    namesDic["names"]['Dalvin Cook']['nicknames'] = []
+    namesDic["names"]['Dalvin Cook']['key'] = counter
+    namesDic["names"]['Dalvin Cook']['team'] = ""
+    namesDic["names"]['Dalvin Cook']['number'] = 00
+    namesDic["names"]['Dalvin Cook']['type'] = ""
     nicknameTags = soup.find_all('strong', class_=None, id=None)
     for index, nicknames in enumerate(nicknameTags):
         if (index < 23):
@@ -290,7 +312,7 @@ def addOtherPlayers():
                 nickname = nickname[:-1]  # remove period if present
             nickname = re.sub(r'[^\x00-\x7F]+', "'", nickname)
             if (nickname != ""):
-                namesDic["Dalvin Cook"]['nicknames'].append(nickname)
+                namesDic["names"]["Dalvin Cook"]['nicknames'].append([nickname, 0])
     counter = counter + 1
 
 
@@ -354,9 +376,10 @@ def addPlayersToDictionary():
 
 def createJSONFile():
     namesJSON = json.dumps(namesDic, indent=4)
-    with open("fantasy-nicknames.json", "w") as outfile:
+    with open("fantasy-nicknames-new.json", "w") as outfile:
         json.dump(namesJSON, outfile)
 
+    print(namesJSON)
 
 def main():
     addPlayersToDictionary()

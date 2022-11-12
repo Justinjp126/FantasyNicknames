@@ -1,6 +1,18 @@
 import React from "react";
-import fantasyNicknames from "../fantasy-nicknames.json";
+import { db } from "../firebase";
+import { ref } from "firebase/database";
+import { useDatabaseSnapshot } from "@react-query-firebase/database";
+
 export default function Player(props) {
+  const dbRef = ref(db, "/names/" + props.items);
+  const products = useDatabaseSnapshot(["/names/" + props.items], dbRef);
+  if (products.isLoading) {
+    return <div>Loading...</div>;
+  }
+  const playerObject = products.data;
+  const json = JSON.stringify(playerObject);
+  const player = JSON.parse(json);
+
   var playerName = props.items;
   var firstInitial = playerName.substring(0, 1);
   var lastName = playerName.substring(
@@ -9,29 +21,8 @@ export default function Player(props) {
   );
   var playerURL = (firstInitial + "_" + lastName).toLowerCase();
 
-  if (playerName == "Amon-Ra St. Brown") {
+  if (playerName == "Amon-Ra St Brown") {
     playerURL = "am_brown";
-  }
-
-  //put names into array
-  var namesArray = [];
-  var nicknamesArray = [];
-  var nameObj = {};
-  Object.keys(fantasyNicknames).forEach(function (key, index) {
-    namesArray.push(key);
-  });
-
-  //grab each player using name as key
-  for (var i = 0; i < namesArray.length; i++) {
-    const name = namesArray[i];
-    nicknamesArray.push(fantasyNicknames[name]);
-  }
-
-  //find key for the current name
-  for (var i = 0; i < nicknamesArray.length; i++) {
-    if (nicknamesArray[i].name == playerName) {
-      nameObj = nicknamesArray[i];
-    }
   }
 
   return (
@@ -41,19 +32,19 @@ export default function Player(props) {
           <img
             className="playerSmall__picture_img"
             src={"src/images/" + playerURL + ".png"}
-            id={nameObj.name + " img"}
-            alt={nameObj.name + " Image"}
+            id={player.name + " img"}
+            alt={player.name + " Image"}
           />
         </div>
         <div className="playerSmall__info">
-          <h2 className="playerSmall__info_name" id={nameObj.name}>
-            {nameObj.name}
+          <h2 className="playerSmall__info_name" id={player.name}>
+            {player.name}
           </h2>
-          <h4 className="playerSmall__info_type" id={nameObj.type}>
-            {nameObj.type}
+          <h4 className="playerSmall__info_type" id={player.type}>
+            {player.type}
           </h4>
-          <h3 className="playerSmall__info_number" id={nameObj.number}>
-            {"#" + nameObj.number}
+          <h3 className="playerSmall__info_number" id={player.number}>
+            {"#" + player.number}
           </h3>
         </div>
       </div>

@@ -23,8 +23,8 @@ export default function NicknamePage() {
   const [searchParams] = useSearchParams();
   var input = searchParams.get("searchBar");
 
-  const dbRef = ref(db, "/");
-  const products = useDatabaseSnapshot(["/"], dbRef);
+  const dbRef = ref(db, "/names");
+  const products = useDatabaseSnapshot(["/names"], dbRef);
   if (products.isLoading) {
     return <div>Loading...</div>;
   }
