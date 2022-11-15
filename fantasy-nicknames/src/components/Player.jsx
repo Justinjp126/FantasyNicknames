@@ -8,17 +8,30 @@ export default function Player(props) {
       playerName.length
     );
     var playerURL = (firstInitial + "_" + lastName).toLowerCase();
+    var team = props.items.team
+      .substring(props.items.team.indexOf(",") + 1)
+      .toLowerCase()
+      .trim();
     return (
       <>
         <div className="player-wrapper">
           <div className="player">
             <div className="player__picture">
-              <img
+              <div
                 className="player__picture_img"
-                src={"src/images/" + playerURL + ".png"}
                 id={props.items.name + " img"}
-                alt={`${props.items.name} Image`}
-              />
+              >
+                <img
+                  src={`src/images/logos/${team}-min.png`}
+                  alt={`${team} Logo`}
+                  className="player__picture_logo"
+                />
+                <img
+                  className="player__picture_img"
+                  src={`src/images/${playerURL}.png`}
+                  alt=""
+                />
+              </div>
             </div>
             <div className="player__info">
               <h2 className="player__info_name" id={props.items.name}>

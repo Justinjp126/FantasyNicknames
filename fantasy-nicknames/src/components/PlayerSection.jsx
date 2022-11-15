@@ -13,10 +13,8 @@ export default function PlayerSection() {
   useEffect(() => {
     onValue(ref(db, "names"), (snapshot) => {
       const data = snapshot.val();
-      console.log(data);
       if (data !== null) {
         Object.values(data).map((names) => {
-          console.log(names);
           setNames((oldArray) => [...oldArray, names]);
         });
       }
