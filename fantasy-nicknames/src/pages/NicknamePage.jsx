@@ -3,6 +3,7 @@ import Nickname from "../components/Nickname";
 import Header from "../components/Header";
 import Search from "../components/Search";
 import PlayerSmall from "../components/PlayerSmall";
+import Footer from "../components/Footer";
 import { useSearchParams } from "react-router-dom";
 import { useDatabaseSnapshot } from "@react-query-firebase/database";
 import { db } from "../firebase";
@@ -59,6 +60,7 @@ export default function NicknamePage() {
             </div>
           </div>
         </section>
+        <Footer />
       </main>
     </>
   );

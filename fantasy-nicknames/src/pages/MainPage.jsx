@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Search from "../components/Search";
 import PlayerSection from "../components/PlayerSection";
 import PillMenu from "../components/PillMenu";
+import Footer from "../components/Footer";
 export default function MainPage() {
   return (
     <>
@@ -19,6 +20,7 @@ export default function MainPage() {
           <PillMenu />
           <PlayerSection />
         </section>
+        <Footer />
       </main>
     </>
   );
