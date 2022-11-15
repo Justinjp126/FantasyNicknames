@@ -20,9 +20,17 @@ export default function Player(props) {
     playerName.length
   );
   var playerURL = (firstInitial + "_" + lastName).toLowerCase();
-
+  var team = player.team.replace(/\,/g, "");
   if (playerName == "Amon-Ra St Brown") {
     playerURL = "am_brown";
+  }
+
+  var teamName = player.team
+    .substring(player.team.indexOf(",") + 1)
+    .toLowerCase()
+    .trim();
+  if (teamName == "49ers") {
+    teamName = "fourtyniners";
   }
 
   return (
@@ -35,14 +43,22 @@ export default function Player(props) {
             id={player.name + " img"}
             alt={player.name + " Image"}
           />
+          <img
+            src={`src/images/logos/${teamName}-min.png`}
+            alt={`${teamName} Logo`}
+            className="playerSmall__picture_logo"
+          />
         </div>
         <div className="playerSmall__info">
-          <h2 className="playerSmall__info_name" id={player.name}>
-            {player.name}
-          </h2>
-          <h4 className="playerSmall__info_type" id={player.type}>
-            {player.type}
-          </h4>
+          <div className="playerSmall__info-name-type">
+            <h2 className="playerSmall__info_name" id={player.name}>
+              {player.name}
+            </h2>
+            <h4 className="playerSmall__info_type" id={player.type}>
+              {player.type}
+            </h4>
+          </div>
+          <h5 className="playerSmall__info_team">{team}</h5>
           <h3 className="playerSmall__info_number" id={player.number}>
             {"#" + player.number}
           </h3>

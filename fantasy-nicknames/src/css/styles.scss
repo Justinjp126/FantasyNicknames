@@ -112,8 +112,8 @@ li {
 @mixin border-fade($team-color) {
   background: linear-gradient(
     90deg,
-    darken($team-color, 5%) 0%,
-    $fade-in-color 15%
+    darken($team-color, 15%) 0%,
+    $fade-in-color 100%
   );
 }
 
@@ -605,31 +605,50 @@ section {
     display: flex;
     justify-content: center;
     width: 50%;
-
+    position: relative;
+    left: 0;
+    top: 0;
     &_img {
       display: block;
       object-fit: scale-down;
       height: 100%;
       width: 100%;
       margin-top: -0.5rem;
+      display: relative;
+      left: 0;
+      top: 0;
+      z-index: 2;
+    }
+    &_logo {
+      display: none;
     }
   }
 
   &__info {
-    margin-left: 2rem;
+    margin-left: 1rem;
     display: flex;
     flex-direction: column;
     width: 50%;
 
+    &-name-type {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
     &_name {
+      line-height: 1.2;
       font-weight: $semi-bold;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       padding-bottom: 0.2rem;
     }
 
     &_type {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       font-weight: 200;
+    }
+
+    &_team {
+      display: none;
     }
 
     &_number {
@@ -700,7 +719,7 @@ section {
 }
 
 // * Media Queries * //
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 630px) {
   .playerSmall {
     &__picture {
       display: flex;
@@ -711,14 +730,36 @@ section {
         max-width: 225px;
         margin-top: -0.5rem;
       }
+      &_logo {
+        display: block;
+        position: absolute;
+        width: 40%;
+        max-width: 100px;
+        opacity: 20%;
+        z-index: 1;
+        margin-top: -1rem;
+        margin-right: 7rem;
+      }
     }
     &__info {
+      &-name-type {
+        align-items: center;
+        flex-direction: row;
+      }
       &_name {
         font-weight: $semi-bold;
         font-size: 2rem;
       }
 
       &_type {
+        margin-left: 0.5rem;
+        font-size: 1rem;
+      }
+
+      &_team {
+        margin-top: 0.2rem;
+        display: block;
+        font-weight: $regular;
         font-size: 1rem;
       }
 
@@ -808,7 +849,7 @@ section {
     background-color: #202020;
     width: 85%;
     margin: 2rem auto 3rem;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     padding: 0.75rem 2.5rem 3rem;
   }
   .mainText {
@@ -892,6 +933,10 @@ section {
         max-width: 225px;
         margin-top: -0.5rem;
       }
+      &_logo {
+        width: 3rem;
+        margin-right: 5.5rem;
+      }
     }
     &__info {
       width: 55%;
@@ -901,6 +946,12 @@ section {
       }
 
       &_type {
+        font-size: 0.8rem;
+      }
+
+      &_team {
+        margin-top: 0.1rem;
+        font-weight: $regular;
         font-size: 0.9rem;
       }
 
