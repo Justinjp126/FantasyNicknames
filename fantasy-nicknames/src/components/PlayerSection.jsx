@@ -67,12 +67,12 @@ export default function PlayerSection() {
             id="popularPlayerDiv"
             onLoad={addTransition}
           >
-            {getPlayers("George Pickens")}
             {getPlayers("D'Andre Swift")}
             {getPlayers("Elijah Mitchell")}
-            {getPlayers("Kenny Pickett")}
-            {getPlayers("Jaylen Waddle")}
+            {getPlayers("Jalen Hurts")}
             {getPlayers("Kyle Pitts")}
+            {getPlayers("George Pickens")}
+            {getPlayers("Jaylen Waddle")}
           </div>
         </>
       );
@@ -85,11 +85,12 @@ export default function PlayerSection() {
             onLoad={addTransition}
           >
             {getPlayers("Tom Brady")}
-            {getPlayers("Justin Herbert")}
-            {getPlayers("Patrick Mahomes")}
-            {getPlayers("Lamar Jackson")}
             {getPlayers("Jalen Hurts")}
+            {getPlayers("Lamar Jackson")}
+            {getPlayers("Patrick Mahomes")}
+
             {getPlayers("Joe Burrow")}
+            {getPlayers("Justin Herbert")}
           </div>
         </>
       );
@@ -102,13 +103,13 @@ export default function PlayerSection() {
             onLoad={addTransition}
           >
             {getPlayers("Cooper Kupp")}
-            {getPlayers("Ja'Marr Chase")}
             {getPlayers("Stefon Diggs")}
-            {getPlayers("Davante Adams")}
-            {getPlayers("Deebo Samuel")}
             {getPlayers("CeeDee Lamb")}
             {getPlayers("Tyreek Hill")}
             {getPlayers("AJ Brown")}
+            {getPlayers("Mike Evans")}
+            {getPlayers("Davante Adams")}
+            {getPlayers("Ja'Marr Chase")}
           </div>
         </>
       );
@@ -135,7 +136,7 @@ export default function PlayerSection() {
             id="popularPlayerDiv"
             onLoad={addTransition}
           >
-            {getPlayers("Johnathan Taylor")}
+            {getPlayers("Jonathan Taylor")}
             {getPlayers("Christian McCaffrey")}
             {getPlayers("Derrick Henry")}
             {getPlayers("Dalvin Cook")}

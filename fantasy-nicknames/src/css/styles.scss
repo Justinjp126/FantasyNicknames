@@ -50,6 +50,7 @@ $cardinals: #97233f;
 $rams: #003594;
 $fourtyniners: #b3995d;
 $seahawks: #69be28;
+$fade-in-color: rgba(51, 51, 51, 1);
 
 // * Global Styles * //
 :root {
@@ -108,6 +109,117 @@ li {
   background: darken($color: gainsboro, $amount: 10);
 }
 
+@mixin border-fade($team-color) {
+  background: linear-gradient(
+    90deg,
+    darken($team-color, 5%) 0%,
+    $fade-in-color 15%
+  );
+}
+
+.bengals {
+  @include border-fade(transparentize($bengals, 0.2));
+}
+.ravens {
+  @include border-fade(lighten($ravens, 35%));
+}
+.steelers {
+  @include border-fade($steelers);
+}
+.browns {
+  @include border-fade($browns);
+}
+
+.bills {
+  @include border-fade(lighten($bills, 20%));
+}
+.dolphins {
+  @include border-fade($dolphins);
+}
+.patriots {
+  @include border-fade($patriots);
+}
+.jets {
+  @include border-fade($jets);
+}
+
+.texans {
+  @include border-fade($texans);
+}
+.colts {
+  @include border-fade(lighten($colts, 20%));
+}
+.jaguars {
+  @include border-fade($jaguars);
+}
+.titans {
+  @include border-fade($titans);
+}
+
+.broncos {
+  @include border-fade($broncos);
+}
+.chiefs {
+  @include border-fade($chiefs);
+}
+.raiders {
+  @include border-fade($raiders);
+}
+.chargers {
+  @include border-fade($chargers);
+}
+
+.bears {
+  @include border-fade($bears);
+}
+.lions {
+  @include border-fade($lions);
+}
+.packers {
+  @include border-fade($packers);
+}
+.vikings {
+  @include border-fade(lighten($vikings, 30%));
+}
+
+.cowboys {
+  @include border-fade($cowboys);
+}
+.giants {
+  @include border-fade($giants);
+}
+.eagles {
+  @include border-fade(lighten($eagles, 10%));
+}
+.commanders {
+  @include border-fade($commanders);
+}
+
+.falcons {
+  @include border-fade($falcons);
+}
+.panthers {
+  @include border-fade($panthers);
+}
+.saints {
+  @include border-fade($saints);
+}
+.buccaneers {
+  @include border-fade(darken($buccaneers, 5%));
+}
+
+.cardinals {
+  @include border-fade($cardinals);
+}
+.rams {
+  @include border-fade(lighten($rams, 12%));
+}
+.fourtyniners {
+  @include border-fade($fourtyniners);
+}
+.seahawks {
+  @include border-fade($seahawks);
+}
 // * Pages *//
 
 // * Main Page * //
@@ -408,21 +520,15 @@ section {
     left: 0;
     z-index: -1;
     border-radius: inherit;
-    background: linear-gradient(
-      90deg,
-      rgb(68, 68, 68) 0%,
-      rgba(51, 51, 51, 1) 10%
-    );
   }
 }
 .player {
-  background-color: lighten(black, 20%);
+  background-color: lighten(black, 18%);
   display: flex;
   padding: 1.25rem 1rem 1rem;
   transition: 0.2s ease;
   margin: 0.15rem;
   border-radius: 0.5rem;
-  //border: 2px solid #383838;
 
   &__picture {
     display: flex;
@@ -439,11 +545,13 @@ section {
       display: block;
       object-fit: scale-down;
       height: 100%;
-      width: 6rem;
+      width: 85%;
+      max-width: 120px;
       position: relative;
       top: 0;
       left: 0;
       z-index: 2;
+      margin: 0 auto;
     }
     &_logo {
       position: absolute;
@@ -748,6 +856,9 @@ section {
   }
   section {
     width: 80%;
+  }
+  .popularPlayers {
+    gap: 1.5rem;
   }
   .nickname-wrapper {
     max-height: 700px;

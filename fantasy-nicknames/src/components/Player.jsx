@@ -1,6 +1,7 @@
 import React from "react";
 export default function Player(props) {
-  if (props.items !== "loadingMainPage") {
+  if (props.items !== "loadingMainPage" || typeof props.items !== "undefined") {
+    console.log(props);
     var playerName = props.items.name;
     var firstInitial = playerName.substring(0, 1);
     var lastName = playerName.substring(
@@ -12,9 +13,13 @@ export default function Player(props) {
       .substring(props.items.team.indexOf(",") + 1)
       .toLowerCase()
       .trim();
+    var teamName = team;
+    if (team == "49ers") {
+      teamName = "fourtyniners";
+    }
     return (
       <>
-        <div className="player-wrapper">
+        <div className={`player-wrapper ${teamName}`}>
           <div className="player">
             <div className="player__picture">
               <div
