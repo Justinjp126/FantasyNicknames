@@ -29,9 +29,9 @@ export default function Player(props) {
     .substring(player.team.indexOf(",") + 1)
     .toLowerCase()
     .trim();
-  if (teamName == "49ers") {
-    teamName = "fourtyniners";
-  }
+  // if (teamName == "49ers") {
+  //   teamName = "fourtyniners";
+  // }
 
   return (
     <>

@@ -5,8 +5,8 @@ import { useDatabaseSnapshot } from "@react-query-firebase/database";
 import { db } from "../firebase";
 import { ref } from "firebase/database";
 export default function Search() {
-  const dbRef = ref(db, "/");
-  const products = useDatabaseSnapshot(["/"], dbRef);
+  const dbRef = ref(db, "/names");
+  const products = useDatabaseSnapshot(["/names"], dbRef);
 
   if (products.isLoading) {
     return <div>Loading...</div>;
@@ -15,7 +15,6 @@ export default function Search() {
   const playerObject = products.data;
   const json = JSON.stringify(playerObject);
   const jsonParse = JSON.parse(json);
-
   var newArray = Object.keys(jsonParse);
 
   const newName = newArray.map((items) => {
