@@ -1,7 +1,6 @@
 import React from "react";
 export default function Player(props) {
   if (props.items !== "loadingMainPage" || typeof props.items !== "undefined") {
-    console.log(props);
     var playerName = props.items.name;
     var firstInitial = playerName.substring(0, 1);
     var lastName = playerName.substring(
