@@ -50,12 +50,12 @@ export default function PlayerSection() {
           >
             {getPlayers("Joe Mixon")}
             {getPlayers("Cooper Kupp")}
-            {getPlayers("Josh Jacobs")}
             {getPlayers("Stefon Diggs")}
+            {getPlayers("Josh Jacobs")}
             {getPlayers("Alvin Kamara")}
             {getPlayers("Jalen Hurts")}
-            {getPlayers("Travis Kelce")}
             {getPlayers("Tyreek Hill")}
+            {getPlayers("Travis Kelce")}
           </div>
         </>
       );

@@ -7,6 +7,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import requests
 import json
 import re
+import pprint
 
 # nickname variable links
 j_taylor_source = requests.get(
@@ -126,6 +127,7 @@ t_hockenson_source = requests.get(
 g_pickens_source = requests.get(
     'https://flurrysports.org/george-pickens-fantasy-football-team-names/')
 namesDic = {"names": {}}  # dictionary with name as key, array of nicknames as value
+loadedDictionary = {}
 counter = 1
 '''
 Function to add values to
@@ -402,9 +404,14 @@ def createJSONFile():
         json.dump(namesJSON, outfile)
     print(namesJSON)
 
+def loadJSONFile():
+    with open('fantasy-nicknames-new.json') as json_file:
+        loadedDictionary = json.load(json_file)
+        print(loadedDictionary["names"]['Dalvin Cook']['team'])
 def main():
     addPlayersToDictionary()
-    createJSONFile()
+    #createJSONFile()
+    #loadJSONFile()
 
 
 main()
