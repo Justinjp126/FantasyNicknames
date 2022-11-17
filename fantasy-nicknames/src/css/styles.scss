@@ -110,11 +110,8 @@ li {
 }
 
 @mixin border-fade($team-color) {
-  background: linear-gradient(
-    90deg,
-    darken($team-color, 15%) 0%,
-    $fade-in-color 100%
-  );
+  background: linear-gradient(#2e2e2e, #2e2e2e) padding-box,
+    linear-gradient(125deg, $team-color 0%, $fade-in-color 12%) border-box;
 }
 
 .bengals {
@@ -508,8 +505,7 @@ section {
 }
 .player-wrapper {
   position: relative;
-  background-clip: padding-box;
-  border: solid transparent 2px;
+  border: solid transparent 3px;
   border-radius: 0.7rem;
   &:before {
     content: "";
