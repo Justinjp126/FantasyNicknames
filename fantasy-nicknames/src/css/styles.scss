@@ -173,7 +173,7 @@ li {
   @include border-fade($lions);
 }
 .packers {
-  @include border-fade($packers);
+  @include border-fade(lighten($packers, 10%));
 }
 .vikings {
   @include border-fade(lighten($vikings, 30%));
@@ -183,7 +183,7 @@ li {
   @include border-fade($cowboys);
 }
 .giants {
-  @include border-fade($giants);
+  @include border-fade(lighten($giants, 10%));
 }
 .eagles {
   @include border-fade(lighten($eagles, 10%));

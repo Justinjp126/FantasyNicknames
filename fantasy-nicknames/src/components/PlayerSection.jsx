@@ -84,13 +84,18 @@ export default function PlayerSection() {
             id="popularPlayerDiv"
             onLoad={addTransition}
           >
-            {getPlayers("Tom Brady")}
             {getPlayers("Jalen Hurts")}
-            {getPlayers("Lamar Jackson")}
-            {getPlayers("Patrick Mahomes")}
-
+            {getPlayers("Tom Brady")}
+            {getPlayers("Justin Fields")}
+            {getPlayers("Kyler Murray")}
+            {getPlayers("Daniel Jones")}
             {getPlayers("Joe Burrow")}
+            {getPlayers("Russell Wilson")}
+            {getPlayers("Tua Tagovailoa")}
             {getPlayers("Justin Herbert")}
+            {getPlayers("Patrick Mahomes")}
+            {getPlayers("Aaron Rodgers")}
+            {getPlayers("Lamar Jackson")}
           </div>
         </>
       );
@@ -108,6 +113,8 @@ export default function PlayerSection() {
             {getPlayers("Tyreek Hill")}
             {getPlayers("AJ Brown")}
             {getPlayers("Mike Evans")}
+            {getPlayers("Courtland Sutton")}
+            {getPlayers("DeAndre Hopkins")}
             {getPlayers("Davante Adams")}
             {getPlayers("Ja'Marr Chase")}
           </div>
