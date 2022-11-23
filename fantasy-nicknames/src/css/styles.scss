@@ -687,7 +687,6 @@ section {
     &_li {
       border-radius: 1rem;
       margin: 0.75rem 0;
-      counter-increment: step-counter;
       background-color: #141414;
       padding: 1rem;
       font-weight: 400;
@@ -710,25 +709,25 @@ section {
         font-size: 1rem;
         margin-top: 0.5rem;
       }
+      &-counter {
+        padding: 1.1rem;
+        content: counter(step-counter);
+        margin: 0 0.75rem 0rem 0.5rem;
+        border-radius: 50%;
+        border: 2px solid #414141;
+        color: #e1e1e1;
+        font-size: 1rem;
+        font-weight: 400;
+        text-align: center;
+        display: inline-flex;
+        width: 2rem;
+        height: 2rem;
+        justify-content: center;
+        align-items: center;
+      }
     }
     &_li:nth-child(even) {
       background-color: #181818;
-    }
-    &_li::before {
-      content: counter(step-counter);
-      margin: 0 0.75rem 0rem 0.5rem;
-      border-radius: 50%;
-      border: 2px solid #414141;
-      color: #e1e1e1;
-      padding: 2px;
-      font-size: 1rem;
-      font-weight: 400;
-      text-align: center;
-      display: inline-flex;
-      width: 2rem;
-      height: 2rem;
-      justify-content: center;
-      align-items: center;
     }
   }
 }

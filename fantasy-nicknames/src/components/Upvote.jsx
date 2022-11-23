@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { db } from "../firebase";
 import { ref, runTransaction } from "firebase/database";
-import {
-  useDatabaseSnapshot,
-  useDatabaseSetMutation,
-} from "@react-query-firebase/database";
 
 export default function Upvote({
   index,
@@ -33,6 +29,7 @@ export default function Upvote({
     <div>
       <div className="nickname-container">
         <li className="nickname__ol_li">
+          <span className="nickname__ol_li-counter">{index + 1}</span>
           <span className="nickname__ol_li-name" index={index}>
             {nicknamesArray[index]}
           </span>
