@@ -13,23 +13,20 @@ export default function Upvote({
   nicknamesArray,
   playerName,
 }) {
-  var upvoted = false;
-
   function handleClick(event) {
     event.target.classList.toggle("upvote-active");
     const upvoteRef = ref(db, "/names/" + playerName + "/nicknames/" + index);
     runTransaction(upvoteRef, (upvote) => {
       if (upvote && event.target.classList.contains("upvote-active")) {
         upvote[1]++;
-        upvoted = true;
         setCount(index, counter + 1);
       } else if (upvote && !event.target.classList.contains("upvote-active")) {
         upvote[1]--;
-        upvoted = false;
         setCount(index, counter - 1);
       }
       return upvote;
     });
+    //location.reload();
   }
 
   return (
