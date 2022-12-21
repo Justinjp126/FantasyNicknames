@@ -35,7 +35,7 @@ export default function Search() {
           />
           <input
             type="image"
-            src="src/images/search.svg"
+            src="svg/search.svg"
             alt="Search Icon"
             className="searchBarContainer__icon"
           />

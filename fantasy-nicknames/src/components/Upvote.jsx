@@ -35,7 +35,7 @@ export default function Upvote({
           </span>
           <div className="nickname__ol_li-upvoteContainer">
             <img
-              src="src/images/arrow.svg"
+              src="svg/arrow.svg"
               alt="Upvote"
               className="nickname__ol_li-upvote"
               disabled={db.isLoading}
