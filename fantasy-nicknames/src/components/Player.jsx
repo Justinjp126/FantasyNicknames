@@ -26,13 +26,13 @@ export default function Player(props) {
                 id={props.items.name + " img"}
               >
                 <img
-                  src={`src/images/logos/${team}-min.png`}
+                  src={`logos/${team}-min.png`}
                   alt={`${team} Logo`}
                   className="player__picture_logo"
                 />
                 <img
                   className="player__picture_img"
-                  src={`src/images/${playerURL}.png`}
+                  src={`playerHeadshots/${playerURL}.png`}
                   alt=""
                 />
               </div>

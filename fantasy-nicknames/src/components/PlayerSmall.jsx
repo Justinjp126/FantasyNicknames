@@ -39,12 +39,12 @@ export default function Player(props) {
         <div className="playerSmall__picture">
           <img
             className="playerSmall__picture_img"
-            src={"src/images/" + playerURL + ".png"}
+            src={"logos/" + playerURL + ".png"}
             id={player.name + " img"}
             alt={player.name + " Image"}
           />
           <img
-            src={`src/images/logos/${teamName}-min.png`}
+            src={`playerHeadshots/${teamName}-min.png`}
             alt={`${teamName} Logo`}
             className="playerSmall__picture_logo"
           />
