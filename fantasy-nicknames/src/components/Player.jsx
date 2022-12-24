@@ -25,11 +25,15 @@ export default function Player(props) {
                 className="player__picture_img"
                 id={props.items.name + " img"}
               >
-                <img
-                  src={`logos/${team}-min.png`}
-                  alt={`${team} Logo`}
-                  className="player__picture_logo"
-                />
+                <picture>
+                  <source srcSet={`logos/${team}-min.webp`} type="image/webp" />
+                  <source srcSet={`logos/${team}-min.png`} type="image/png" />
+                  <img
+                    src={`logos/${team}-min.png`}
+                    alt={`${team} Logo`}
+                    className="player__picture_logo"
+                  />
+                </picture>
                 <picture>
                   <source
                     srcSet={`playerHeadshots/${playerURL}.webp`}
@@ -37,11 +41,12 @@ export default function Player(props) {
                   />
                   <source
                     srcSet={`playerHeadshots/${playerURL}.png`}
-                    type="image/jpeg"
+                    type="image/png"
                   />
                   <img
                     src={`playerHeadshots/${playerURL}.png`}
                     className="player__picture_img"
+                    alt="Player Image"
                   />
                 </picture>
               </div>
