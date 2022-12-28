@@ -407,7 +407,7 @@ def createJSONFile():
 def loadJSONFile():
     with open('fantasy-nicknames-new.json') as json_file:
         loadedDictionary = json.load(json_file)
-        print(loadedDictionary["names"]['Dalvin Cook']['team'])
+
 def main():
     addPlayersToDictionary()
     #createJSONFile()

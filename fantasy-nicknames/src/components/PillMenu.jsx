@@ -11,14 +11,14 @@ export default function PillMenu() {
         <Link to="/new">
           <Pill name="New" active="" />
         </Link>
+        <Link to="/qb">
+          <Pill name="QB" active="" />
+        </Link>
         <Link to="/rb">
           <Pill name="RB" active="" />
         </Link>
         <Link to="/wr">
           <Pill name="WR" active="" />
-        </Link>
-        <Link to="/qb">
-          <Pill name="QB" active="" />
         </Link>
         <Link to="/te">
           <Pill name="TE" active="" />

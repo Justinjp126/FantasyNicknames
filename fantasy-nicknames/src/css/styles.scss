@@ -67,7 +67,13 @@ $fade-in-color: rgba(51, 51, 51, 1);
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
-
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+}
 body {
   color: $text-white;
   background-color: lighten(black, 10%);
@@ -112,11 +118,13 @@ li {
 @mixin border-fade($team-color) {
   background: linear-gradient(#2e2e2e, #2e2e2e) padding-box,
     linear-gradient(125deg, $team-color 0%, $fade-in-color 12%) border-box;
+  background-position: 0px;
 }
 
 .bengals {
   @include border-fade(transparentize($bengals, 0.2));
 }
+
 .ravens {
   @include border-fade(lighten($ravens, 35%));
 }
@@ -328,7 +336,9 @@ section {
 }
 
 // * Navbar Component * //
-
+.navActive {
+  color: rebeccapurple;
+}
 #menuToggle {
   display: block;
   position: relative;
@@ -416,9 +426,6 @@ section {
   font-size: 22px;
 }
 
-/*
- * And let's slide it in from the left
- */
 #menuToggle input:checked ~ ul {
   transform: none;
 }
@@ -859,11 +866,12 @@ section {
 /* Big screen devices (889px and above) */
 @media only screen and (min-width: 889px) {
   section {
-    background-color: #202020;
+    background-color: #1a1a1a;
     width: 85%;
     margin: 2rem auto 3rem;
     border-radius: 1rem;
     padding: 0.75rem 2.5rem 3rem;
+    border: 3px solid lightgrey;
   }
   .mainText {
     &__title {
@@ -895,7 +903,7 @@ section {
     }
 
     &__expand {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
   }
 }

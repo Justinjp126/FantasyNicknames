@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, NavLink } from "react-router-dom";
 export default function Navbar() {
   const links = document.getElementsByClassName("nav-item");
   let location = useLocation();
@@ -10,6 +10,7 @@ export default function Navbar() {
     home.classList.add("active");
   }
   const handleClick = (event) => {
+    console.log(event.target);
     for (var i = 0; i < links.length; i++) {
       links[i].classList.remove("navActive");
     }
@@ -28,9 +29,6 @@ export default function Navbar() {
               <Link to="/">
                 <li>Home</li>
               </Link>
-              <Link to="/about">
-                <li>About</li>
-              </Link>
               <Link to="/contact">
                 <li>Contact</li>
               </Link>
@@ -39,26 +37,11 @@ export default function Navbar() {
         </nav>
         <div className="header__expand">
           <div className="header__underline">
-            <Link to="/">
-              <span
-                className="header__expand_home nav-item"
-                onClick={handleClick}
-                id="home"
-              >
+            <NavLink to="/">
+              <span className="header__expand_home nav-item" id="home">
                 Home
               </span>
-            </Link>
-          </div>
-          <div className="header__underline">
-            <Link to="/about">
-              <span
-                className="header__expand_about nav-item"
-                onClick={handleClick}
-                id="about"
-              >
-                About
-              </span>
-            </Link>
+            </NavLink>
           </div>
           <div className="header__underline">
             <Link to="/contact">
