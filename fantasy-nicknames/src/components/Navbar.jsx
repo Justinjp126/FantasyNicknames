@@ -6,7 +6,15 @@ export default function Navbar() {
   };
 
   let activeClassName = "underline";
+  const location = useLocation();
 
+  //destructuring pathname from location
+  const { pathname } = location;
+
+  //Javascript split method to get the name of the path in array
+  const splitLocation = pathname.split("/");
+
+  console.log(splitLocation[1]);
   return (
     <>
       <div className="header__nav_navbar">
@@ -29,26 +37,28 @@ export default function Navbar() {
         <div className="header__expand">
           <div className="header__underline">
             <NavLink to="/home">
-              {({ isActive }) => (
-                <span
-                  className={isActive ? activeClassName : undefined}
-                  id="home"
-                >
-                  Home
-                </span>
-              )}
+              <span
+                className={`header__expand_contact nav-item ${
+                  splitLocation[1] === "" || splitLocation[1] === "home"
+                    ? "navActive"
+                    : "navInactive"
+                }`}
+                id="home"
+              >
+                Home
+              </span>
             </NavLink>
           </div>
           <div className="header__underline">
             <NavLink to="/contact">
-              {({ isActive }) => (
-                <span
-                  className={isActive ? activeClassName : undefined}
-                  id="contact"
-                >
-                  Contact
-                </span>
-              )}
+              <span
+                className={`header__expand_contact nav-item ${
+                  splitLocation[1] === "contact" ? "navActive" : "navInactive"
+                }`}
+                id="contact"
+              >
+                Contact
+              </span>
             </NavLink>
           </div>
         </div>

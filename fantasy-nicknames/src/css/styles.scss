@@ -336,8 +336,29 @@ section {
 }
 
 // * Navbar Component * //
-.navActive {
-  color: rebeccapurple;
+.nav-item {
+  position: relative;
+  display: block;
+  &:hover::after {
+    opacity: 0.5;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(1) !important;
+    background-color: #cbcbcb;
+    transition: all 0.3s;
+    opacity: 0;
+  }
+}
+
+.navActive::after {
+  opacity: 1 !important;
 }
 #menuToggle {
   display: block;
@@ -853,24 +874,25 @@ section {
         position: relative;
         display: block;
         font-family: "Inter";
-        &:after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          width: 100%;
-          height: 2px;
-          transform: scaleX(0);
-          background-color: #cbcbcb;
-          transition: transform 0.3s;
-        }
+        // &:after {
+        //   content: "";
+        //   position: absolute;
+        //   bottom: 0;
+        //   left: 0;
+        //   right: 0;
+        //   width: 100%;
+        //   height: 2px;
+        //   transform: scaleX(0);
+        //   background-color: #cbcbcb;
+        //   transition: transform 0.3s;
+        //   opacity: 1;
+        // }
 
-        &:hover {
-          &:after {
-            transform: scaleX(1);
-          }
-        }
+        // &:hover {
+        //   &:after {
+        //     transform: scaleX(1);
+        //   }
+        // }
         .active:hover {
           transform: scaleX(1);
         }
