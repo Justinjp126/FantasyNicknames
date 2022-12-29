@@ -463,7 +463,8 @@ section {
 .pillContainer {
   overflow: auto;
   white-space: nowrap;
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .pill {
   font-weight: $regular;
@@ -685,7 +686,7 @@ section {
 .nickname {
   color: $text-white;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-top: 1rem;
   width: 100%;
   margin: 0 auto;
@@ -702,27 +703,27 @@ section {
       align-items: center;
       &-upvoteContainer {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         margin-left: auto;
         margin-right: 1.5rem;
         align-items: center;
       }
       &-upvote {
-        width: 1.25rem;
+        width: 0.9rem;
         cursor: pointer;
+        margin-right: 0.5rem;
       }
       &-upvoteCount {
         font-size: 1rem;
-        margin-top: 0.5rem;
       }
       &-counter {
-        padding: 1.1rem;
+        padding: 0rem;
         margin: 0 0.75rem 0rem 0.5rem;
         border-radius: 50%;
         border: 2px solid #414141;
         color: #e1e1e1;
-        font-size: 1rem;
+        font-size: 0.9rem;
         font-weight: 400;
         text-align: center;
         display: inline-flex;
@@ -731,9 +732,9 @@ section {
         justify-content: center;
         align-items: center;
       }
-    }
-    &_li:nth-child(even) {
-      background-color: #181818;
+      &-name {
+        max-width: 60%;
+      }
     }
   }
 }
@@ -787,6 +788,42 @@ section {
         font-weight: $medium;
         font-size: 1.25rem;
         margin-bottom: 0.75rem;
+      }
+    }
+  }
+  .pillContainer {
+    margin-bottom: 0;
+  }
+  .nickname {
+    font-size: 1.15rem;
+    margin-top: 1rem;
+    &__ol {
+      &_li {
+        margin: 0.75rem 0;
+        padding: 1rem;
+        &-upvoteContainer {
+          flex-direction: column;
+          margin-right: 1.5rem;
+        }
+        &-upvote {
+          width: 1rem;
+          margin-right: 0;
+          margin-bottom: 0.25rem;
+        }
+        &-upvoteCount {
+          font-size: 0.9rem;
+        }
+        &-counter {
+          border-radius: 50%;
+          border: 2px solid #414141;
+          color: #e1e1e1;
+          font-size: 1rem;
+          width: 2.2rem;
+          height: 2.2rem;
+        }
+        &-name {
+          max-width: 60%;
+        }
       }
     }
   }
@@ -939,6 +976,39 @@ section {
   .nicknameSection {
     height: 100%;
     display: flex;
+  }
+  .nickname {
+    font-size: 1rem;
+    margin-top: 1rem;
+    &__ol {
+      &_li {
+        margin: 0.75rem 0;
+        padding: 0.9rem 1rem;
+        &-upvoteContainer {
+          flex-direction: column;
+          margin-right: 1.5rem;
+        }
+        &-upvote {
+          width: 1rem;
+          margin-right: 0;
+          margin-bottom: 0.25rem;
+        }
+        &-upvoteCount {
+          font-size: 0.9rem;
+        }
+        &-counter {
+          border-radius: 50%;
+          border: 2px solid #414141;
+          color: #e1e1e1;
+          font-size: 1rem;
+          width: 2.1rem;
+          height: 2.1rem;
+        }
+        &-name {
+          max-width: 60%;
+        }
+      }
+    }
   }
   .pillMenu {
     display: block;

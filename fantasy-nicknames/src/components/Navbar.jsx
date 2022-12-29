@@ -1,21 +1,12 @@
 import React from "react";
 import { Link, useLocation, NavLink } from "react-router-dom";
 export default function Navbar() {
-  const links = document.getElementsByClassName("nav-item");
-  let location = useLocation();
-  let path = location.pathname;
-  let classUpdate = "nav-item";
-  let home = document.getElementById("home");
-  if (path == "/" && home !== null) {
-    home.classList.add("active");
-  }
-  const handleClick = (event) => {
-    console.log(event.target);
-    for (var i = 0; i < links.length; i++) {
-      links[i].classList.remove("navActive");
-    }
-    event.target.classList.add("navActive");
+  let activeStyle = {
+    textDecoration: "underline",
   };
+
+  let activeClassName = "underline";
+
   return (
     <>
       <div className="header__nav_navbar">
@@ -26,7 +17,7 @@ export default function Navbar() {
             <span></span>
             <span></span>
             <ul id="menu">
-              <Link to="/">
+              <Link to="/home">
                 <li>Home</li>
               </Link>
               <Link to="/contact">
@@ -37,25 +28,32 @@ export default function Navbar() {
         </nav>
         <div className="header__expand">
           <div className="header__underline">
-            <NavLink to="/">
-              <span className="header__expand_home nav-item" id="home">
-                Home
-              </span>
+            <NavLink to="/home">
+              {({ isActive }) => (
+                <span
+                  className={isActive ? activeClassName : undefined}
+                  id="home"
+                >
+                  Home
+                </span>
+              )}
             </NavLink>
           </div>
           <div className="header__underline">
-            <Link to="/contact">
-              <span
-                className="header__expand_contact nav-item"
-                onClick={handleClick}
-                id="contact"
-              >
-                Contact
-              </span>
-            </Link>
+            <NavLink to="/contact">
+              {({ isActive }) => (
+                <span
+                  className={isActive ? activeClassName : undefined}
+                  id="contact"
+                >
+                  Contact
+                </span>
+              )}
+            </NavLink>
           </div>
         </div>
       </div>
     </>
   );
 }
+//"header__expand_contact nav-item"

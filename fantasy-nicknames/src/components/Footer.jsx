@@ -1,13 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <>
       <footer className="footer">
         <small className="footer__text">
-          <Link className="footer__text_name" to="/about">
+          <a
+            className="footer__text_name"
+            href="https://www.linkedin.com/in/justinputhenpurayil/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             Made by Justin Puthenpurayil
-          </Link>
+          </a>
         </small>
       </footer>
     </>
