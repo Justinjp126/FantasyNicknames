@@ -92,6 +92,9 @@ li {
   list-style-position: inside;
 }
 
+#picker {
+  opacity: 0 !important;
+}
 /* Designing for scroll-bar */
 *::-webkit-scrollbar {
   height: 4px;
@@ -356,7 +359,6 @@ section {
     opacity: 0;
   }
 }
-
 .navActive::after {
   opacity: 1 !important;
 }

@@ -13,8 +13,7 @@ export default function Navbar() {
 
   //Javascript split method to get the name of the path in array
   const splitLocation = pathname.split("/");
-
-  console.log(splitLocation[1]);
+  console.log(splitLocation);
   return (
     <>
       <div className="header__nav_navbar">
@@ -25,7 +24,7 @@ export default function Navbar() {
             <span></span>
             <span></span>
             <ul id="menu">
-              <Link to="/home">
+              <Link to="/">
                 <li>Home</li>
               </Link>
               <Link to="/contact">
@@ -36,10 +35,17 @@ export default function Navbar() {
         </nav>
         <div className="header__expand">
           <div className="header__underline">
-            <NavLink to="/home">
+            <NavLink to="/">
               <span
                 className={`header__expand_contact nav-item ${
-                  splitLocation[1] === "" || splitLocation[1] === "home"
+                  splitLocation[1] === "" ||
+                  splitLocation[1] === "home" ||
+                  splitLocation[1] === "popular" ||
+                  splitLocation[1] === "new" ||
+                  splitLocation[1] === "qb" ||
+                  splitLocation[1] === "rb" ||
+                  splitLocation[1] === "wr" ||
+                  splitLocation[1] === "te"
                     ? "navActive"
                     : "navInactive"
                 }`}
