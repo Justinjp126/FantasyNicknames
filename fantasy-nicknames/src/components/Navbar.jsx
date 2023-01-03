@@ -13,7 +13,6 @@ export default function Navbar() {
 
   //Javascript split method to get the name of the path in array
   const splitLocation = pathname.split("/");
-  console.log(splitLocation);
   return (
     <>
       <div className="header__nav_navbar">
