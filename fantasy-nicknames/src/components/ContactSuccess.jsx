@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-export default function Contact() {
+export default function ContactSuccess() {
   const FORM_ENDPOINT =
     "https://public.herotofu.com/v1/4f41f400-8d17-11ed-a003-6f0b76086b1c";
   const [submitted, setSubmitted] = useState(false);
@@ -64,6 +64,12 @@ export default function Contact() {
               </div>
             </div>
           </form>
+          <div className="success">
+            <h2 className="success__title">Success</h2>
+            <p className="success__text">
+              I'll be in contact as soon as possible!
+            </p>
+          </div>
         </div>
       </div>
     </>

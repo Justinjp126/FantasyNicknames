@@ -1,6 +1,7 @@
 import MainPage from "./pages/MainPage";
 import NicknamePage from "./pages/NicknamePage";
 import ContactPage from "./pages/ContactPage";
+import ContactPageSuccess from "./pages/ContactPageSuccess";
 import ErrorPage from "./pages/ErrorPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./css/styles.min.css";
@@ -52,6 +53,11 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <ContactPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/contactSuccess",
+    element: <ContactPageSuccess />,
     errorElement: <ErrorPage />,
   },
   {

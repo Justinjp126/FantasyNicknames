@@ -836,9 +836,32 @@ section {
     font-size: 0.85rem;
     font-weight: $light;
     margin: 1.25rem 0 4rem;
-    padding: 0.3rem 0;
-    border: 1px solid $text-white;
-    border-radius: 0.1rem;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 300ms ease-in-out;
+  }
+  .submit:hover,
+  .submit:focus {
+    background-color: darken($text-white, 15);
+  }
+  .success {
+    background-color: rgba(144, 238, 144, 0.555);
+    border-radius: 0.4rem;
+    padding: 1rem 1.25rem 1.2rem;
+    margin: -2rem 0 2rem;
+    width: fit-content;
+    &__title {
+      color: white;
+      font-weight: $regular;
+      font-size: 1.2rem;
+    }
+    &__text {
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+      font-weight: $light;
+    }
   }
 }
 
@@ -1084,8 +1107,8 @@ section {
       font-size: 1rem;
       font-weight: $light;
       margin: 1.25rem 0 4rem;
-      padding: 0.3rem 0;
-      border-radius: 0.1rem;
+      padding: 0.4rem 0.3rem;
+      border-radius: 0.2rem;
     }
   }
 }
