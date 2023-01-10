@@ -1,14 +1,55 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 export default function Contact() {
-  const FORM_ENDPOINT =
-    "https://public.herotofu.com/v1/4f41f400-8d17-11ed-a003-6f0b76086b1c";
-  const [submitted, setSubmitted] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [emailSent, setEmailSent] = useState(false);
 
-  const handleSubmit = () => {
-    setTimeout(() => {
-      setSubmitted(true);
-    }, 100);
+  const isValidEmail = (email) => {
+    const regex =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regex.test(String(email).toLowerCase());
   };
+
+  const submit = (e) => {
+    if (name && email && message && isValidEmail(email)) {
+      const serviceId = "service_9azyevo";
+      const templateId = "template_4mnb1xq";
+      const userId = "rYIieeVGo0a9Yddvi";
+      const templateParams = {
+        name,
+        email,
+        message,
+      };
+
+      emailjs
+        .send(serviceId, templateId, templateParams, userId)
+        .then((response) => console.log(response))
+        .then((error) => console.log(error));
+
+      setName("");
+      setEmail("");
+      setMessage("");
+      setEmailSent(true);
+    } else {
+      if (!name) {
+        alert("Please fill in name field");
+        e.preventDefault();
+      } else if (!email) {
+        alert("Please fill in email field");
+        e.preventDefault();
+      } else if (!message) {
+        alert("Please fill in message field");
+        e.preventDefault();
+      } else {
+        alert("Please enter valid email address");
+        e.preventDefault();
+      }
+    }
+    e.preventDefault();
+  };
+
   return (
     <>
       <div className="contactForm">
@@ -19,12 +60,7 @@ export default function Contact() {
           </p>
         </div>
         <div className="form">
-          <form
-            action={FORM_ENDPOINT}
-            onSubmit={handleSubmit}
-            method="POST"
-            target="_top"
-          >
+          <form>
             <div className="formContainer">
               <div className="nameContainer">
                 <label htmlFor="name" className="form__name-label">
@@ -35,7 +71,8 @@ export default function Contact() {
                   type="text"
                   id="name"
                   name="name"
-                  required
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                 />
               </div>
               <div className="emailContainer">
@@ -47,7 +84,8 @@ export default function Contact() {
                   type="text"
                   id="email"
                   name="email"
-                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="descriptionContainer">
@@ -58,12 +96,21 @@ export default function Contact() {
                   className="form__description"
                   name="message"
                   id="message"
-                  required
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
-                <input type="submit" value="Submit" className="submit" />
+                <button onClick={submit} className="submit">
+                  Submit
+                </button>
               </div>
             </div>
           </form>
+          <div className={`success ${emailSent ? "visible" : null}`}>
+            <h2 className="success__title">Success</h2>
+            <p className="success__text">
+              I'll be in contact as soon as possible!
+            </p>
+          </div>
         </div>
       </div>
     </>

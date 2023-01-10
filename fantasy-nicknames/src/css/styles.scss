@@ -846,7 +846,11 @@ section {
   .submit:focus {
     background-color: darken($text-white, 15);
   }
+  .visible {
+    display: block !important;
+  }
   .success {
+    display: none;
     background-color: rgba(144, 238, 144, 0.555);
     border-radius: 0.4rem;
     padding: 1rem 1.25rem 1.2rem;

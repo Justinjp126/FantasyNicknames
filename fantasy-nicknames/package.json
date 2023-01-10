@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@react-query-firebase/database": "^1.0.0-dev.2",
+    "emailjs-com": "^3.2.0",
     "firebase": "^9.12.1",
     "fuse.js": "^6.6.2",
     "react": "^18.2.0",
